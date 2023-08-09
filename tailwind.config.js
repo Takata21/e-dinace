@@ -6,7 +6,7 @@ export default {
     extend: {
       colors: {
         'primary-500': '#877EFF',
-        footerBg: '#777',
+        'footer-Bg': '#777',
         'secondary-500': '#FFB620',
         blue: '#0095F6',
         'logout-btn': '#FF5A5A',
