@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { Menu } from '@/components/Menu.jsx'
+import { Menu } from './index'
 export const Navbar = () => {
   const MenuBtn = useRef(null)
   const handleClick = () => {
