@@ -6,7 +6,7 @@ export const Navbar = () => {
     MenuBtn.current.classList.toggle('active')
   }
   return (
-    <header className="bg-white border-gray-200 dark:bg-gray-900 h-20 ">
+    <header className="bg-white border-gray-200  h-20 ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto  relative md:flex-row md:flex-nowrap">
         <div className="p-4 flex justify-between items-center w-full md:w-auto md:flex-1">
           <a
@@ -21,11 +21,12 @@ export const Navbar = () => {
               alt="dinace Logo"
             />
             <div>
-              <span className="self-center  font-semibold text-base whitespace-nowrap dark:text-white">
+              <span className="self-center  font-medium text-xs whitespace-nowrap ">
                 Universidad Tecnológica de Panamá
               </span>
-              <h2 className="text-base font-bold text-[#29166F]">
-                Dirección Nacional de Ciencias Espaciales
+              <h2 className="text-xs font-semibold text-[#29166F]">
+                Dirección Nacional de Ciencias <br className="md:hidden" />{' '}
+                Espaciales
               </h2>
             </div>
           </a>
