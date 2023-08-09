@@ -53,3 +53,75 @@ body {
     border: 1px solid red;
 
 }
+
+/*----------------Menu Button-----------------*/
+
+
+
+.btn {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 40px;
+}
+
+.btn:before,
+.btn:after,
+.btn div {
+    background: #000;
+    content: "";
+    display: block;
+    height: 4px;
+    border-radius: 3px;
+    margin: 8px 0;
+    transition: 0.5s;
+}
+
+.btn.active:before {
+    transform: translateY(12px) rotate(135deg);
+}
+
+.btn.active:after {
+    transform: translateY(-12px) rotate(-135deg);
+}
+
+.btn.active div {
+    transform: scale(0);
+}
+
+/*----------------Mobile Menu-----------------*/
+@layer components {
+
+    .menu {
+        @apply absolute top-20 w-screen bg-white hidden h-0 overflow-hidden invisible md:relative md:visible md:top-0 md:h-auto md:block;
+        /* transition: all 5s ease; */
+
+    }
+}
+
+.menu.active {
+    @apply block visible h-[334px];
+    /* transition: all 5s ease; */
+}
+
+.links-transitions {
+    transition: font-weight 1s ease-in;
+
+}
+
+.links-transitions::after {
+    background-color: rgb(237, 44, 73);
+    bottom: -4px;
+    content: "";
+    height: 2px;
+    left: 0px;
+    position: absolute;
+    transform: scaleX(0);
+    transition: transform 0.3s ease 0s;
+    width: 100%;
+}
+
+.links-transitions:hover::after {
+    transform: scale(1);
+}
