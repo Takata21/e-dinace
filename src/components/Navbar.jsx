@@ -6,9 +6,9 @@ export const Navbar = () => {
     MenuBtn.current.classList.toggle('active')
   }
   return (
-    <header className="bg-white border-gray-200  h-20 ">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto  relative md:flex-row md:flex-nowrap">
-        <div className="p-4 flex justify-between items-center w-full md:w-auto md:flex-1">
+    <header className="h-20 bg-white border-gray-200 ">
+      <div className="relative z-50 flex flex-wrap items-center justify-between max-w-screen-xl mx-auto md:flex-row md:flex-nowrap">
+        <div className="flex items-center justify-between w-full p-4 pb-0 md:w-auto md:flex-1">
           <a
             href="https://dinace.utp.ac.pa/"
             className="flex items-center"
@@ -21,7 +21,7 @@ export const Navbar = () => {
               alt="dinace Logo"
             />
             <div>
-              <span className="self-center  font-medium text-xs whitespace-nowrap ">
+              <span className="self-center text-xs font-medium whitespace-nowrap ">
                 Universidad Tecnológica de Panamá
               </span>
               <h2 className="text-xs font-semibold text-[#29166F]">
