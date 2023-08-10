@@ -146,7 +146,11 @@ body {
         overflow: hidden;
         background-color: #fff;
 
-        @media screen and (min-width:768px) {
+    }
+
+    @media screen and (min-width:768px) {
+        .menu {
+            visibility: visible;
             margin-top: 0;
             position: relative;
             height: auto;
@@ -203,4 +207,24 @@ body {
 .carousel button.group {
     display: none;
 
+}
+
+.arrow {
+    animation: arrow 4s infinite;
+}
+
+@keyframes arrow {
+
+    from {
+        transform: translateX(0%);
+    }
+
+    50% {
+
+        transform: translateX(50%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
 }
