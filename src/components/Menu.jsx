@@ -24,7 +24,7 @@ export const Menu = ({ Menuref }) => {
         </li>
         <li>
           <Link
-            href="#"
+            to="/constellations"
             className="block py-4 text-[#0c163b] font-medium text-xl md:py-0 links-transitions md:relative"
           >
             Constelaciones
