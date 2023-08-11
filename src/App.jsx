@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Layout } from './layout'
-import { HomePage } from './pages/index'
+import { HomePage, Constellations, Constellation } from './pages/index'
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -9,6 +10,14 @@ function App() {
         {
           path: '/',
           element: <HomePage />,
+        },
+        {
+          path: '/constellations',
+          element: <Constellations />,
+        },
+        {
+          path: '/constellations/:id',
+          element: <Constellation />,
         },
       ],
     },
