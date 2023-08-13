@@ -16,7 +16,7 @@ export const Navbar = () => {
             rel="noreferrer"
           >
             <img
-              src="./images/dinace_logo.png"
+              src="/images/dinace_logo.png"
               className="h-16 mr-3"
               alt="dinace Logo"
             />
