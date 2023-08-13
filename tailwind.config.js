@@ -7,10 +7,12 @@ export default {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    fontFamily: {
-      Space: ['SpaceGrotesk', 'system-ui'],
-    },
     extend: {
+      fontFamily: {
+        Antonio: ['Antonio, system-ui'],
+        Bellefair: ['Bellefair, system-ui'],
+        Metropolis: ['Metropolis, system-ui'],
+      },
       colors: {
         'primary-500': '#877EFF',
         'footer-Bg': '#777',
