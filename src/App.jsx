@@ -16,7 +16,7 @@ function App() {
           element: <Constellations />,
         },
         {
-          path: '/constellations/:id',
+          path: '/constellations/:name',
           element: <Constellation />,
         },
       ],
