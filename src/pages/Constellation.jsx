@@ -8,7 +8,6 @@ export function Constellation() {
   const { constellationData, loading } = useConstellation({
     name,
   })
-  console.log(constellationData)
   return (
     <div className="px-5 text-white lg:px-24 constellation">
       {loading ? (
