@@ -6,7 +6,9 @@ export function useConstellation({ name }) {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     const foundConstellation = constellations.filter(
-      (constellation) => constellation.name.toLowerCase() === name
+      (constellation) =>
+        constellation.name.toLowerCase() ===
+        name.replace('-', ' ').toLowerCase()
     )
 
     const {
