@@ -1,3 +1,5 @@
 export { HomePage } from './HomePage'
 export { Constellations } from './Constellations'
 export { Constellation } from './Constellation'
+export { Galaxies } from './Galaxies'
+export { Galaxy } from './Galaxy'
