@@ -36,7 +36,7 @@ export const Navbar = () => {
             </button>
           </div>
         </div>
-        <Menu Menuref={MenuBtn} />
+        <Menu Menuref={MenuBtn} handleClick={handleClick} />
       </div>
     </header>
   )
