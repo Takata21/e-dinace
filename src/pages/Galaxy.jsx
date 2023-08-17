@@ -19,7 +19,7 @@ export function Galaxy() {
               <img
                 src={`/images/galaxies/${galaxyInfo?.id}.webp`}
                 alt=""
-                className="lg:min-w-[350px] lg:min-h-[300px] rounded-[50%]"
+                className="lg:min-w-[350px] lg:min-h-[300px]"
               />
             </Zoom>
             <div>
