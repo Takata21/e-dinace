@@ -1,13 +1,19 @@
-import { useRef } from 'react'
 import { Menu } from './index'
-export const Navbar = () => {
-  const MenuBtn = useRef(null)
+import { CgMenuRightAlt, CgClose } from 'react-icons/cg'
+import { useState } from 'react'
+import { DarkThemeToggle } from 'flowbite-react'
+
+export const Navbar = ({ setDarkMode }) => {
+  const [menu, setMenu] = useState(false)
+  // const MenuBtn = useRef()
   const handleClick = () => {
-    MenuBtn.current.classList.toggle('active')
+    setMenu((prev) => !prev)
+    // MenuBtn.current.classList.toggle('active')
   }
+
   return (
-    <header className="h-20 bg-white border-gray-200 ">
-      <div className="relative z-50 flex flex-wrap items-center justify-between max-w-screen-xl mx-auto md:flex-row md:flex-nowrap">
+    <header className="h-20 bg-white border-gray-200 dark:bg-gray-900">
+      <div className="relative z-50 flex flex-wrap items-center justify-between max-w-screen-xl mx-auto md:flex-row md:flex-nowrap dark:text-white">
         <div className="flex items-center justify-between w-full p-4 pb-0 md:w-auto md:flex-1">
           <a
             href="https://dinace.utp.ac.pa/"
@@ -24,19 +30,23 @@ export const Navbar = () => {
               <span className="self-center text-xs font-medium whitespace-nowrap ">
                 Universidad Tecnológica de Panamá
               </span>
-              <h2 className="text-xs font-semibold text-[#29166F]">
+              <h2 className="text-xs font-semibold text-[#29166F] dark:text-white">
                 Dirección Nacional de Ciencias <br className="md:hidden" />{' '}
                 Espaciales
               </h2>
             </div>
           </a>
-          <div className="relative w-10 md:hidden">
-            <button className="btn" onClick={() => handleClick()}>
-              <div className=""></div>
+          <div>
+            <DarkThemeToggle />
+            <button
+              className="p-2 text-gray-500 rounded cursor-pointer lg:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              onClick={() => handleClick()}
+            >
+              {menu ? <CgClose size={24} /> : <CgMenuRightAlt size={24} />}
             </button>
           </div>
         </div>
-        <Menu Menuref={MenuBtn} handleClick={handleClick} />
+        <Menu Menu={menu} handleClick={handleClick} />
       </div>
     </header>
   )
