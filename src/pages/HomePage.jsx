@@ -5,13 +5,9 @@ import { Link } from 'react-router-dom'
 export function HomePage() {
   return (
     <div className="relative min-h-screen">
-      {/* <h1 className="absolute z-10 w-full font-semibold text-center text-white uppercase font-Space">
-        Descubre Efemérides, Galaxias,
-        <br className="md:hidden" /> Eclipses y más
-      </h1> */}
       <Slider />
       <div className="flex flex-col gap-6 my-5 font-Space lg:flex-row">
-        <article className="bg-[#18202b] lg:gap-5 flex justify-between p-8 relative">
+        <article className="dark:bg-[#18202b] lg:gap-5 flex justify-between p-8 relative">
           <div className="flex flex-col items-center justify-center gap-5 text-white capitalize">
             <h5 className="text-xl font-bold">Fase lunar actual</h5>
             <img src="./images/moon.png" alt="" width={150} />
