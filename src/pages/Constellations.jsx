@@ -1,3 +1,5 @@
+import { SearchConstellations } from '../components/SearchConstellations'
+import { SelectConstellations } from '../components/SelectConstellations'
 import { ConstellationCard } from '../components/index'
 export function Constellations() {
   const constellations_ = [
@@ -92,7 +94,11 @@ export function Constellations() {
   ]
 
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-center w-full min-h-screen gap-5 p-5 bg-[#18202b] ">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-center w-full min-h-screen gap-5 p-5 dark:bg-[#18202b] ">
+      <div className="lg:col-span-4">
+        <SearchConstellations />
+        <SelectConstellations />
+      </div>
       {constellations_.map((constellation) => (
         <ConstellationCard
           key={constellation.name}

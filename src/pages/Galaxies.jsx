@@ -1,4 +1,6 @@
 import { GalaxiesCard } from '../components'
+import { SearchGalaxy } from '../components/SearchGalaxy'
+import { SelectGalaxy } from '../components/SelectGalaxy'
 
 export function Galaxies() {
   const galaxies = [
@@ -271,7 +273,11 @@ export function Galaxies() {
   ]
 
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-center w-full min-h-screen gap-5 p-5 bg-[#18202b] ">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-center w-full min-h-screen gap-5 p-5 dark:bg-[#18202b]">
+      <div className="lg:col-span-4">
+        <SearchGalaxy />
+        <SelectGalaxy />
+      </div>
       {galaxies.map((galaxy) => (
         <GalaxiesCard
           key={galaxy.id}
