@@ -126,7 +126,7 @@ body {
 
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1080px) {
     .menu {
         visibility: visible;
         margin-top: 0;
@@ -150,7 +150,7 @@ body {
 
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1080px) {
     .links-transitions::after {
         background-color: rgb(237, 44, 73);
         bottom: -4px;
