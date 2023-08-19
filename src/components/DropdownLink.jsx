@@ -6,7 +6,6 @@ export function DropdownLink({ title, close }) {
   const [show, setShow] = useState(false)
   const handleClick = () => {
     setShow((prev) => !prev)
-    close()
   }
   return (
     <li className="relative">
@@ -29,6 +28,9 @@ export function DropdownLink({ title, close }) {
             <Link
               to="moon-phases"
               className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              onClick={() => {
+                close()
+              }}
             >
               Fases de la Luna
             </Link>
@@ -37,6 +39,9 @@ export function DropdownLink({ title, close }) {
             <Link
               to="/lunar-eclipses"
               className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              onClick={() => {
+                close()
+              }}
             >
               Eclipses Lunares
             </Link>
@@ -45,6 +50,9 @@ export function DropdownLink({ title, close }) {
             <Link
               to="/solar-eclipses"
               className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              onClick={() => {
+                close()
+              }}
             >
               Eclipses Solares
             </Link>
