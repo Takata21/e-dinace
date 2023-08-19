@@ -7,6 +7,9 @@ export default {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
+    screens: {
+      lg: '1280px',
+    },
     extend: {
       fontFamily: {
         Antonio: ['Antonio, system-ui'],
