@@ -110,11 +110,11 @@ body {
 /*----------------Mobile Menu-----------------*/
 
 .menu {
-    visibility: 0;
+    visibility: hidden;
     display: none;
     width: 100vw;
     height: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: #fff;
 
 }
@@ -122,7 +122,7 @@ body {
 .menu.active {
     display: block;
     visibility: visible;
-    height: 452px;
+    height: max-content;
 
 }
 
