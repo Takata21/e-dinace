@@ -13,8 +13,8 @@ export const Navbar = ({ setDarkMode }) => {
 
   return (
     <header className="h-20 bg-white border-gray-200 dark:bg-gray-900">
-      <div className="relative z-50 flex flex-wrap items-center justify-between max-w-screen-xl mx-auto md:flex-row md:flex-nowrap dark:text-white">
-        <div className="flex items-center justify-between w-full p-4 pb-0 md:w-auto md:flex-1">
+      <div className="relative z-50 flex flex-wrap items-center justify-between max-w-screen-xl mx-auto lg:flex-row lg:flex-nowrap dark:text-white">
+        <div className="flex items-center justify-between w-full p-4 pb-0 lg:w-auto lg:flex-1">
           <a
             href="https://dinace.utp.ac.pa/"
             className="flex items-center"
@@ -31,7 +31,7 @@ export const Navbar = ({ setDarkMode }) => {
                 Universidad Tecnológica de Panamá
               </span>
               <h2 className="text-xs font-semibold text-[#29166F] dark:text-white">
-                Dirección Nacional de Ciencias <br className="md:hidden" />{' '}
+                Dirección Nacional de Ciencias <br className="lg:hidden" />{' '}
                 Espaciales
               </h2>
             </div>
