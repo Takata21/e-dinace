@@ -2,7 +2,7 @@ import React from 'react'
 
 export function SearchConstellations() {
   return (
-    <div className="w-[500px]">
+    <div className="lg:w-[500px]">
       <form>
         <label
           htmlFor="default-search"
