@@ -4,10 +4,10 @@ import { FaArrowRightLong } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 export const Slider = () => {
   return (
-    <div className="relative h-80 md:min-h-[calc(100vh-72px)]">
+    <div className="relative h-80 lg:h-[calc(100vh-80px)]">
       <Carousel
         slideInterval={6000}
-        className="relative h-80 carousel md:min-h-[calc(100vh-72px)]"
+        className="relative h-80 carousel lg:h-full"
       >
         <div className="flex flex-col items-end justify-end h-full pl-5 text-left pb-9 lg:justify-center lg:items-start lg:gap-5">
           <VideoBackground source="/videos/milky_way_glowing_at_night.mp4" />
