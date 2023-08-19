@@ -6,6 +6,7 @@ import {
   Constellation,
   Galaxies,
   Galaxy,
+  Eclipses,
 } from './pages/index'
 
 function App() {
@@ -32,6 +33,10 @@ function App() {
         {
           path: '/galaxies/:name',
           element: <Galaxy />,
+        },
+        {
+          path: '/eclipses',
+          element: <Eclipses />,
         },
       ],
     },
