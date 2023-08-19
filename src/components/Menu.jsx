@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-
+import { DropdownLink } from './DropdownLink'
 export const Menu = ({ Menu, handleClick }) => {
   return (
     <nav
@@ -53,22 +53,7 @@ export const Menu = ({ Menu, handleClick }) => {
             Galaxias
           </Link>
         </li>
-        <li>
-          <Link
-            onClick={() => handleClick()}
-            className="block py-4 text-[#0c163b] font-medium text-xl lg:py-0 links-transitions lg:relative dark:text-white"
-          >
-            Fases De La Luna
-          </Link>
-        </li>
-        <li>
-          <Link
-            onClick={() => handleClick()}
-            className="block py-4 text-[#0c163b] font-medium text-xl lg:py-0 links-transitions lg:relative dark:text-white"
-          >
-            Eclipses
-          </Link>
-        </li>
+        <DropdownLink title="Eventos Astronómicos" close={handleClick} />
       </ul>
     </nav>
   )
