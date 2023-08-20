@@ -6,8 +6,8 @@ export function HomePage() {
   return (
     <div className="relative min-h-screen">
       <Slider />
-      <div className="flex flex-col gap-6 my-5 font-Space lg:flex-row">
-        <article className="dark:bg-[#18202b] lg:gap-5 flex justify-between p-8 relative">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 my-5 g font-Space p-4">
+        <article className="relative flex justify-between p-6 bg-white border border-gray-200 rounded-lg shadow lg:gap-5 dark:bg-gray-800 dark:border-gray-700">
           <div className="flex flex-col items-center justify-center gap-5 text-white capitalize">
             <h5 className="text-xl font-bold">Fase lunar actual</h5>
             <img src="./images/moon.png" alt="" width={150} />
@@ -33,8 +33,8 @@ export function HomePage() {
             </Link>
           </div>
         </article>
-        <article className="bg-[#18202b] lg:gap-5 flex justify-between p-8 relative">
-          <div className="flex flex-col items-center justify-center gap-5 text-white capitalize">
+        <article className="relative flex justify-between p-6 bg-white border border-gray-200 rounded-lg shadow lg:gap-5 dark:bg-gray-800 dark:border-gray-700 ">
+          <div className="flex flex-col items-center justify-center gap-5 text-white capitalize ">
             <h5 className="text-xl font-bold">Proximo Eclipse Solar</h5>
             <img
               src="./images/eclipse-solar.jpg"
@@ -64,7 +64,7 @@ export function HomePage() {
             </Link>
           </div>
         </article>
-        <article className="bg-[#18202b] lg:gap-5 flex justify-between p-8 relative">
+        <article className="relative flex justify-between p-6 bg-white border border-gray-200 rounded-lg shadow lg:gap-5 dark:bg-gray-800 dark:border-gray-700">
           <div className="flex flex-col items-center justify-center gap-5 text-white capitalize">
             <h5 className="text-xl font-bold">Proximo Eclipse Lunar</h5>
             <img

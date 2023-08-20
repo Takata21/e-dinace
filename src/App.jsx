@@ -6,7 +6,9 @@ import {
   Constellation,
   Galaxies,
   Galaxy,
-  Eclipses,
+  LunarEclipses,
+  MoonPhases,
+  SolarEclipses,
 } from './pages/index'
 
 function App() {
@@ -35,8 +37,17 @@ function App() {
           element: <Galaxy />,
         },
         {
-          path: '/eclipses',
-          element: <Eclipses />,
+          path: '/moon-phases',
+          element: <MoonPhases />,
+        },
+
+        {
+          path: '/lunar-eclipses',
+          element: <LunarEclipses />,
+        },
+        {
+          path: '/solar-eclipses',
+          element: <SolarEclipses />,
         },
       ],
     },

@@ -9,11 +9,11 @@ export function Constellation() {
     name,
   })
   return (
-    <div className="px-5 text-white lg:px-24 constellation">
+    <div className="px-5 dark:text-white lg:px-24 constellation bg-[#fafafa] dark:bg-gray-800">
       {loading ? (
         <Loader />
       ) : (
-        <div className="">
+        <div className="p-5">
           <div className="gap-8 lg:flex lg:my-5">
             <Zoom>
               <img
@@ -23,10 +23,10 @@ export function Constellation() {
               />
             </Zoom>
             <div>
-              <h2 className="my-5 text-4xl font-bold text-center uppercase font-Antonio lg:text-left lg:text-7xl ">
+              <h2 className="mb-5 text-4xl font-bold text-center uppercase font-Antonio lg:text-left lg:text-7xl ">
                 {constellationData?.name}
               </h2>
-              <p className="font-Metropolis text-[#ffffffbf] lg:leading-7">
+              <p className="font-Metropolis dark:text-white lg:leading-7">
                 {constellationData?.description}
               </p>
             </div>

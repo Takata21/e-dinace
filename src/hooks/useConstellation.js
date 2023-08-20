@@ -35,8 +35,38 @@ export function useConstellation({ name }) {
             mythology,
             mainStars,
             constellationInfo: [
-              { label: 'superficie', desc: foundConstellation.surface },
-              // ... otras propiedades ...
+              {
+                label: 'Superficie',
+                desc: foundConstellation.surface,
+              },
+              {
+                label: 'Ascensión Recta',
+                desc: foundConstellation.rightAscension,
+              },
+              {
+                label: 'Declinación',
+                desc: foundConstellation.declination,
+              },
+              {
+                label: 'Visibilidad',
+                desc: foundConstellation.visibility,
+              },
+              {
+                label: 'Número de Estrellas',
+                desc: foundConstellation.numberOfStars,
+              },
+              {
+                label: 'Objetos Messier',
+                desc: foundConstellation.messierObjects,
+              },
+              {
+                label: 'Objetos NGC',
+                desc: foundConstellation.NGCObjects,
+              },
+              {
+                label: 'Objetos Caldwell',
+                desc: foundConstellation.caldwellObjects,
+              },
             ],
           }
 

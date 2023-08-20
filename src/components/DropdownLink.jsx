@@ -6,12 +6,13 @@ export function DropdownLink({ title, close }) {
   const [show, setShow] = useState(false)
   const handleClick = () => {
     setShow((prev) => !prev)
+    close()
   }
   return (
     <li className="relative">
       <button
         className="flex items-center justify-between mx-auto text-xl font-medium text-gray-900 rounded md:border-0 md:p-0 md:w-auto dark:text-white dark:focus:text-white dark:border-gray-700"
-        onClick={() => handleClick()}
+        onClick={() => setShow((prev) => !prev)}
       >
         <span>{title}</span>
         <ArrowDown />
@@ -26,10 +27,10 @@ export function DropdownLink({ title, close }) {
         <ul className="py-2 text-xl font-medium text-gray-700 dark:text-white">
           <li>
             <Link
-              to="moon-phases"
+              to="/moon-phases"
               className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               onClick={() => {
-                close()
+                handleClick()
               }}
             >
               Fases de la Luna
@@ -40,7 +41,7 @@ export function DropdownLink({ title, close }) {
               to="/lunar-eclipses"
               className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               onClick={() => {
-                close()
+                handleClick()
               }}
             >
               Eclipses Lunares
@@ -51,7 +52,7 @@ export function DropdownLink({ title, close }) {
               to="/solar-eclipses"
               className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               onClick={() => {
-                close()
+                handleClick()
               }}
             >
               Eclipses Solares

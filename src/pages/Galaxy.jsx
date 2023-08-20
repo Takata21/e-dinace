@@ -9,29 +9,29 @@ export function Galaxy() {
   })
 
   return (
-    <div className="px-5 text-white lg:px-24 constellation">
+    <div className="px-5 dark:text-white lg:px-24 constellation bg-[#fafafa] dark:bg-gray-800">
       {loading ? (
         <Loader />
       ) : (
-        <div className="">
+        <div className="p-5">
           <div className="gap-28 lg:flex lg:my-5">
             <Zoom>
               <img
                 src={`/images/galaxies/${galaxyInfo?.id}.webp`}
                 alt=""
-                className="lg:min-w-[350px] lg:min-h-[300px]"
+                className="lg:min-w-[350px] lg:min-h-[300px] rounded"
               />
             </Zoom>
             <div>
-              <h2 className="my-5 text-4xl font-bold text-center uppercase font-Antonio lg:text-left lg:text-7xl ">
+              <h2 className="mb-5 text-4xl font-bold text-center uppercase font-Antonio lg:text-left lg:text-7xl ">
                 {galaxyInfo?.galaxy?.original}
               </h2>
-              <p className="font-Metropolis text-[#ffffffbf] lg:leading-7">
+              <p className="font-Metropolis dark:text-white lg:leading-7">
                 {galaxyInfo?.desc?.translation}
               </p>
             </div>
           </div>
-          <ul className="flex flex-col flex-wrap gap-3 my-5 lg:flex-row lg:justify-center">
+          <ul className="flex flex-col flex-wrap gap-3 my-5 lg:flex-row">
             {galaxyInfo?.galaxyData.map((info) => {
               return (
                 <InfoCard

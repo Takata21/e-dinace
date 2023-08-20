@@ -273,7 +273,7 @@ export function Galaxies() {
   ]
 
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-center w-full min-h-screen gap-5 p-5 dark:bg-[#18202b]">
+    <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] items-center justify-center w-full min-h-screen gap-5 p-5 dark:bg-[#18202b]">
       <div className="lg:col-span-4">
         <SearchGalaxy />
         <SelectGalaxy />
