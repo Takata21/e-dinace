@@ -1,4 +1,4 @@
-import { useGalaxy } from '../hooks/useGalaxies'
+import { useGalaxy } from '../hooks/useGalaxy'
 import { Loader, InfoCard } from '../components'
 import Zoom from 'react-medium-image-zoom'
 import '../image-zoom.css'
@@ -7,7 +7,6 @@ export function Galaxy() {
   const { galaxyInfo, loading } = useGalaxy({
     id: url,
   })
-
   return (
     <div className="px-5 dark:text-white lg:px-24 constellation bg-[#fafafa] dark:bg-gray-800">
       {loading ? (
@@ -32,7 +31,7 @@ export function Galaxy() {
             </div>
           </div>
           <ul className="flex flex-col flex-wrap gap-3 my-5 lg:flex-row">
-            {galaxyInfo?.galaxyData.map((info) => {
+            {galaxyInfo?.galaxyData?.map((info) => {
               return (
                 <InfoCard
                   key={`${crypto.randomUUID()}`}
