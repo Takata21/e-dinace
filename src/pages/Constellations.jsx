@@ -60,7 +60,9 @@ export function Constellations() {
             />
           ))
         ) : (
-          <h2>No hay resultados para su búsqueda</h2>
+          <h2 className="flex justify-center w-full mx- col-span-full">
+            No hay resultados para su búsqueda
+          </h2>
         )}
       </div>
     </div>

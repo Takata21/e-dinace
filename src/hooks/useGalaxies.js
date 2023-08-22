@@ -1,29 +1,32 @@
-import { useEffect, useState } from 'react'
+import { useState, useCallback, useEffect } from 'react'
+import { getAllGalaxies } from '../services/Galaxies'
 
-export function useGalaxy({ id }) {
-  const [galaxyInfo, setGalaxyInfo] = useState('')
-  const [loading, setLoading] = useState(true)
-
+export function useGalaxies({ search }) {
+  const [galaxies, setGalaxies] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+  const getGalaxies = async ({ search }) => {
+    try {
+      setLoading(true)
+      setError(null)
+      const data = await getAllGalaxies({ search } || '')
+      setGalaxies(data)
+    } catch (error) {
+      setError('Error while fetching Galaxies')
+      setGalaxies([])
+      console.error('Error while fetching Galaxies:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
   useEffect(() => {
-    import('../assets/Galaxies.json')
-      .then((module) => {
-        const galaxies = module.default // Acceder al objeto JSON
-        const foundedGalaxy = galaxies.find((galaxy) => galaxy.id === id)
+    getGalaxies({ search })
+  }, [search])
 
-        if (foundedGalaxy) {
-          setGalaxyInfo({ ...foundedGalaxy })
-        } else {
-          // Manejar el caso en que no se encuentra la galaxia
-        }
-
-        setLoading(false)
-      })
-      .catch((error) => {
-        console.log(error)
-        // Manejar errores si ocurren durante la carga
-        setLoading(false)
-      })
-  }, [id])
-
-  return { galaxyInfo, loading }
+  return {
+    galaxies,
+    loading,
+    error,
+    getGalaxies,
+  }
 }
