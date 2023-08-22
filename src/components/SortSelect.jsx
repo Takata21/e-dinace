@@ -1,6 +1,4 @@
-import React from 'react'
-
-export function SelectGalaxy() {
+function SortSelect({ sort, handleSortChange }) {
   return (
     <div className="lg:w-64">
       <label
@@ -12,12 +10,18 @@ export function SelectGalaxy() {
       <select
         id="small"
         className="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg lg:mb-0 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        onChange={handleSortChange}
+        value={sort}
       >
-        <option value="all">Nombre</option>
-        <option value="red">Corrimiento al Rojo</option>
-        <option value="constellation">Constelación</option>
-        <option value="mass">Masa</option>
+        <option defaultValue value="all">
+          Nombre
+        </option>
+        <option value="surface">Superficie</option>
+        <option value="ngc">Objetos NGC</option>
+        <option value="caldwell">Objetos Caldwell</option>
       </select>
     </div>
   )
 }
+
+export default SortSelect

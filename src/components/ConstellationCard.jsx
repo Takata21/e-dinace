@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CardSkeleton } from './CardSkeleton'
 
-export function ConstellationCard({ constellation }) {
+export function ConstellationCard({ constellation, id }) {
   const [isLoading, setIsLoading] = useState(true)
   return (
     <Link
-      to={`./${constellation.toLowerCase().replace(/\s+/g, '-')}`}
+      to={`./${constellation.toLowerCase().replace(/\s+/g, '-')}?id=${id}`}
       className="h-56 group lg:flex-grow"
     >
       <div className="relative h-full font-semibold tracking-wider text-white uppercase font-Bellefair">
