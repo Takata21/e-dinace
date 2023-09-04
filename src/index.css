@@ -8,6 +8,7 @@
 
 }
 
+/* 
 @font-face {
     font-family: 'Metropolis';
     src: url('./assets/fonts/Metropolis-Regular.woff2') format('woff2');
@@ -78,7 +79,7 @@
     font-style: normal;
     font-display: swap;
 
-}
+} */
 
 
 html,
@@ -209,11 +210,21 @@ body {
     }
 }
 
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 2px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+}
 
 .link-gradient {
     background: rgb(59, 130, 246);
     background: to right, rgb(56, 189, 248) 0%, rgb(59, 130, 246);
 }
+
 
 
 /* .constellation::after {
