@@ -28,7 +28,10 @@ export const Slider = () => {
           <h3 className="text-[#da374f] font-Space text-xl font-bold block uppercase text-left w-full tracking-[3px] lg:text-3xl">
             Constelaciones
           </h3>
-          <Link className="w-full text-2xl font-semibold text-white text-gradient lg:text-5xl lg:w-[620px]">
+          <Link
+            to="/constellations"
+            className="w-full text-2xl font-semibold text-white text-gradient lg:text-5xl lg:w-[620px]"
+          >
             Las Constelaciones nos Guían{' '}
             <FaArrowRightLong className="arrow lg:my-5" color="#da374f" />
           </Link>
@@ -38,7 +41,10 @@ export const Slider = () => {
           <h3 className="text-[#da374f] font-Space text-xl font-bold block uppercase text-left w-full tracking-[3px] lg:text-3xl">
             Galaxias
           </h3>
-          <Link className="w-full text-2xl font-semibold text-white text-gradient lg:text-5xl lg:w-[620px]">
+          <Link
+            to="/galaxies"
+            className="w-full text-2xl font-semibold text-white text-gradient lg:text-5xl lg:w-[620px]"
+          >
             NAVEGA ENTRE LAS CONSTELACIONES DE GALAXIAS
             <FaArrowRightLong className="arrow lg:my-5" color="#da374f" />
           </Link>
