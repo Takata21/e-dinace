@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { getAllGalaxies } from '../services/Galaxies'
 
 export function useGalaxies({ search }) {
