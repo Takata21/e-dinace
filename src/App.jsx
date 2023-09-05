@@ -9,6 +9,7 @@ import {
   LunarEclipses,
   MoonPhases,
   SolarEclipses,
+  SolarEclipse,
 } from './pages/index'
 
 function App() {
@@ -44,6 +45,10 @@ function App() {
         {
           path: '/lunar-eclipses',
           element: <LunarEclipses />,
+        },
+        {
+          path: '/solar-eclipses/:seq',
+          element: <SolarEclipse />,
         },
         {
           path: '/solar-eclipses',
