@@ -1,18 +1,11 @@
 import { Link } from 'react-router-dom'
-
+import { formatEclipseDate } from '../utils/astronomyUtils'
 /* eslint-disable camelcase */
 export function EclipseCard({ eclipse }) {
   const { seq_num, calendar_date, ecl_type, central_dur } = eclipse
-  const formatDate = calendar_date
-    ? new Intl.DateTimeFormat('es-ES', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-      }).format(new Date(calendar_date))
-    : null
 
   return (
-    <article className="relative flex justify-center p-6 bg-white border border-gray-200 rounded-lg shadow lg:gap-5 dark:bg-gray-800 dark:border-gray-700">
+    <article className="relative flex justify-center p-6 bg-white border border-gray-200 rounded-lg shadow lg:gap-5 dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300">
       <Link to={`/solar-eclipses/${seq_num}`} className="flex flex-col gap-5">
         <div className="">
           <img
@@ -26,7 +19,9 @@ export function EclipseCard({ eclipse }) {
         <div className="flex flex-col gap-5 lg:flex-row">
           <div className="flex justify-between gap-10 lg:gap-2 lg:whitespace-nowrap">
             <span className="text-[#6e7884] font-medium">Fecha</span>
-            <p className="text-[#a4b0c0] font-semibold">{formatDate}</p>
+            <p className="text-[#a4b0c0] font-semibold">
+              {formatEclipseDate(calendar_date)}
+            </p>
           </div>
           <div className="flex justify-between gap-10 lg:gap-2 lg:whitespace-nowrap">
             <span className="text-[#6e7884] font-medium">Tipo</span>

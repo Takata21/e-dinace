@@ -92,3 +92,25 @@ export function getLunarPhaseDescription(phasePercentage) {
     ? matchedPhase.description
     : { es: 'Fase Desconocida', en: 'Unknown Phase' }
 }
+
+export function formatEclipseDate(calendarDate) {
+  return calendarDate
+    ? new Intl.DateTimeFormat('es-ES', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      }).format(new Date(calendarDate))
+    : null
+}
+
+export function convertMinutesToHMS(minutes) {
+  if (isNaN(minutes)) {
+    return 'Invalid input'
+  }
+
+  const hours = Math.floor(minutes / 60)
+  const remainingMinutes = Math.floor(minutes % 60)
+  const seconds = Math.floor((remainingMinutes % 1) * 60)
+
+  return `${hours} h ${remainingMinutes} m ${seconds} s`
+}
