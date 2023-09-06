@@ -1,4 +1,3 @@
-import { useState, useRef, useEffect } from 'react'
 import eclipsesData from '../assets/SolarEclipses.json'
 import { EclipseCard } from '../components/index'
 export function SolarEclipses() {

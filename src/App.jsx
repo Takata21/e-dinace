@@ -10,6 +10,7 @@ import {
   MoonPhases,
   SolarEclipses,
   SolarEclipse,
+  LunarEclipse,
 } from './pages/index'
 
 function App() {
@@ -47,12 +48,17 @@ function App() {
           element: <LunarEclipses />,
         },
         {
-          path: '/solar-eclipses/:seq',
-          element: <SolarEclipse />,
+          path: '/lunar-eclipses/:seq',
+          element: <LunarEclipse />,
         },
+
         {
           path: '/solar-eclipses',
           element: <SolarEclipses />,
+        },
+        {
+          path: '/solar-eclipses/:seq',
+          element: <SolarEclipse />,
         },
       ],
     },
