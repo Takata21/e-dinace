@@ -5,10 +5,10 @@ export function LunarEclipseCard({ eclipse }) {
   const { calendar_date, ecl_type, seq_num, phase_duration } = eclipse
 
   return (
-    <article className="relative flex justify-center p-6 bg-white border border-gray-200 rounded-lg shadow lg:gap-5 dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-bg duration-300">
+    <article className="relative flex justify-center duration-300 bg-white border border-gray-200 rounded-lg shadow lg:gap-5 dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-bg">
       <Link
         to={`/lunar-eclipses/${seq_num}134`}
-        className="flex flex-col gap-5"
+        className="flex flex-col gap-5 p-6"
       >
         <div className="">
           <img

@@ -93,11 +93,11 @@ export function getLunarPhaseDescription(phasePercentage) {
     : { es: 'Fase Desconocida', en: 'Unknown Phase' }
 }
 
-export function formatEclipseDate(calendarDate) {
+export function formatEclipseDate({ calendarDate, type = 'short' }) {
   return calendarDate
     ? new Intl.DateTimeFormat('es-ES', {
         year: 'numeric',
-        month: 'short',
+        month: type,
         day: 'numeric',
       }).format(new Date(calendarDate))
     : null

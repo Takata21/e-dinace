@@ -5,7 +5,7 @@ export function EclipseCard({ eclipse }) {
   const { seq_num, calendar_date, ecl_type, central_dur } = eclipse
 
   return (
-    <article className="relative flex justify-center p-6 bg-white border border-gray-200 rounded-lg shadow lg:gap-5 dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300">
+    <article className="relative flex justify-center p-6 transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow lg:gap-5 dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
       <Link to={`/solar-eclipses/${seq_num}`} className="flex flex-col gap-5">
         <div className="">
           <img
