@@ -82,7 +82,7 @@ export function SolarEclipse() {
                 <h2>Tipo:</h2>
 
                 <p className="text-lg font-semibold lg:font-bold lg:text-2xl">
-                  {SOLAR_ECLIPSE_TYPES[eclType.trim()]}
+                  {SOLAR_ECLIPSE_TYPES[eclType?.trim()]}
                 </p>
               </div>
             </div>
