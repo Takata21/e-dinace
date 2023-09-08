@@ -3,14 +3,14 @@ import React from 'react'
 export const Footer = () => {
   const year = new Date().getFullYear()
   return (
-    <footer className="bg-footer-Bg flex items-center">
+    <footer className="flex items-center py-5 bg-footer-Bg">
       <img
         src="/images/logo-footer.png"
         width={100}
         alt="utp logo"
-        className="hidden md:block"
+        className="hidden lg:block lg:w-28"
       />
-      <div className="text-center p-5 md:text-left text-white font-medium">
+      <div className="p-5 font-medium text-center text-white lg:text-left lg:text-[13px]">
         <h5>Universidad Tecnológica de Panamá - {year}</h5>
         <p>
           Avenida Universidad Tecnológica de Panamá, Vía Puente Centenario,

@@ -8,7 +8,7 @@ export function HomePage() {
       <Slider />
       <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 my-5 g font-Space p-4">
         <article className="relative flex justify-between p-6 bg-white border border-gray-200 rounded-lg shadow lg:gap-5 dark:bg-gray-800 dark:border-gray-700">
-          <div className="flex flex-col items-center justify-center gap-5 text-white capitalize">
+          <div className="flex flex-col items-center justify-center gap-5 capitalize dark:text-white">
             <h5 className="text-xl font-bold">Fase lunar actual</h5>
             <img src="./images/moon.png" alt="" width={150} />
             <span className="text-lg font-bold ">waning crescent</span>
@@ -34,7 +34,7 @@ export function HomePage() {
           </div>
         </article>
         <article className="relative flex justify-between p-6 bg-white border border-gray-200 rounded-lg shadow lg:gap-5 dark:bg-gray-800 dark:border-gray-700 ">
-          <div className="flex flex-col items-center justify-center gap-5 text-white capitalize ">
+          <div className="flex flex-col items-center justify-center gap-5 capitalize dark:text-white ">
             <h5 className="text-xl font-bold">Proximo Eclipse Solar</h5>
             <img
               src="./images/eclipse-solar.jpg"
@@ -65,7 +65,7 @@ export function HomePage() {
           </div>
         </article>
         <article className="relative flex justify-between p-6 bg-white border border-gray-200 rounded-lg shadow lg:gap-5 dark:bg-gray-800 dark:border-gray-700">
-          <div className="flex flex-col items-center justify-center gap-5 text-white capitalize">
+          <div className="flex flex-col items-center justify-center gap-5 capitalize dark:text-white">
             <h5 className="text-xl font-bold">Proximo Eclipse Lunar</h5>
             <img
               src="./images/eclipse-solar.jpg"
