@@ -3,7 +3,7 @@ import React from 'react'
 export const Footer = () => {
   const year = new Date().getFullYear()
   return (
-    <footer className="flex items-center py-5 bg-footer-Bg">
+    <footer className="relative flex items-center py-5 bg-footer-Bg">
       <img
         src="/images/logo-footer.png"
         width={100}
@@ -25,6 +25,7 @@ export const Footer = () => {
           buzondesugerencias@utp.ac.pa
         </p>
       </div>
+      <div className="absolute right-5 bottom-5"></div>
     </footer>
   )
 }
