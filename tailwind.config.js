@@ -18,7 +18,7 @@ export default {
       },
       colors: {
         'primary-500': '#877EFF',
-        'footer-Bg': '#777',
+        'footer-Bg': '#444',
         'secondary-500': '#FFB620',
         blue: '#0095F6',
         'logout-btn': '#FF5A5A',
