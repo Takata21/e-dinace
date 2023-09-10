@@ -11,6 +11,7 @@ import {
   SolarEclipses,
   SolarEclipse,
   LunarEclipse,
+  Ephemeris,
 } from './pages/index'
 
 function App() {
@@ -59,6 +60,10 @@ function App() {
         {
           path: '/solar-eclipses/:seq',
           element: <SolarEclipse />,
+        },
+        {
+          path: '/Ephemeris',
+          element: <Ephemeris />,
         },
       ],
     },

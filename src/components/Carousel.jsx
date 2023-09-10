@@ -16,7 +16,7 @@ export const Slider = () => {
             Efemérides
           </h3>
           <Link
-            to="/"
+            to="/Ephemeris"
             className="w-full text-2xl font-semibold text-white text-gradient lg:text-5xl lg:w-[620px]"
           >
             Explorando el Calendario Cósmico, Tras los Pasos de los Astros
@@ -54,7 +54,10 @@ export const Slider = () => {
           <h3 className="text-[#da374f] font-Space text-xl font-bold block uppercase text-left w-full tracking-[3px] lg:text-3xl">
             Eclipses
           </h3>
-          <Link className="w-full text-2xl font-semibold text-white text-gradient lg:text-5xl lg:w-[620px]">
+          <Link
+            to="/lunar-eclipses"
+            className="w-full text-2xl font-semibold text-white text-gradient lg:text-5xl lg:w-[620px]"
+          >
             ENTRE LUZ Y SOMBRA{' '}
             <FaArrowRightLong className="arrow lg:my-5" color="#da374f" />
           </Link>
@@ -64,7 +67,10 @@ export const Slider = () => {
           <h3 className="text-[#da374f] font-Space text-xl font-bold block uppercase text-left w-full tracking-[3px] lg:text-3xl">
             Fases de la Luna
           </h3>
-          <Link className="w-full text-2xl font-semibold text-white text-gradient lg:text-5xl lg:w-[620px]">
+          <Link
+            to="/moon-phases"
+            className="w-full text-2xl font-semibold text-white text-gradient lg:text-5xl lg:w-[620px]"
+          >
             EXPLORA LAS FASES OCULTAS DE LA LUNA{' '}
             <FaArrowRightLong className="arrow lg:my-5" color="#da374f" />
           </Link>
