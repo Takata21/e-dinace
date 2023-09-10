@@ -95,6 +95,7 @@ export function MoonPhases() {
                   className="bg-gray-700 border w-full p-2.5 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 rounded rounded-r-none"
                   value={dateTimeValue}
                   onChange={handleChange}
+                  readOnly
                 />
                 <button
                   type="submit"
