@@ -5,12 +5,16 @@ import {
   formatGeographicCoordinates,
   getLunarPhaseDescription,
 } from '../utils/astronomyUtils'
-import { BsSearch } from 'react-icons/bs'
+import { BsSearch, BsCalendarEvent } from 'react-icons/bs'
 import { useQuery } from '@tanstack/react-query'
 import { getMoon } from '../services/Moon'
 import { Loader, ImageSkeleton } from '../components/index'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 export function MoonPhases() {
+  const inputRef = useRef(null)
+  const [SelectedDate, setSelectedDate] = useState(
+    new Date().toISOString().slice(0, 16)
+  )
   const [dateTimeValue, setDateTimeValue] = useState(
     new Date().toISOString().slice(0, 16)
   )
@@ -23,15 +27,19 @@ export function MoonPhases() {
 
   const { days, hours, minutes } = convertAge(data?.age)
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    setSelectedDate(e.target.value)
+  }
+  const handleClick = (e) => {
     e.preventDefault()
-    refetch({ queryKey: ['moonPhases'], dateTimeValue })
+    window.scrollTo(0, 0)
+    setDateTimeValue(inputRef.current.value)
   }
 
-  const handleChange = (e) => {
-    console.log(e.target.value)
-    setDateTimeValue(e.target.value)
+  const handleKeyDown = (e) => {
+    e.preventDefault() // Prevenir la entrada manual
   }
+
   return (
     <div className="flex flex-col justify-between w-full min-h-screen p-5 text-white bg-black lg:flex-row">
       {isLoading ? (
@@ -67,7 +75,7 @@ export function MoonPhases() {
           </div>
 
           <section className="flex flex-col gap-8">
-            <form className="" onSubmit={handleSubmit}>
+            <form className="">
               <div
                 className="flex items-center p-1 mb-4 text-sm rounded text-blue bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
                 role="alert"
@@ -91,15 +99,18 @@ export function MoonPhases() {
                 <input
                   type="datetime-local"
                   name="datetime-input"
-                  id="date"
-                  className="bg-gray-700 border w-full p-2.5 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 rounded rounded-r-none"
-                  value={dateTimeValue}
+                  id="date-time-input"
+                  className="bg-gray-700 border w-full p-2.5 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 rounded rounded-r-none "
+                  ref={inputRef}
+                  value={SelectedDate}
+                  onKeyDown={handleKeyDown}
                   onChange={handleChange}
-                  readOnly
                 />
+
                 <button
                   type="submit"
                   className="flex items-center justify-center text-white bg-blue hover:bg-blue/80 focus:ring-4 focus:ring-blue-300 rounded text-sm px-5 py-2.5 lg:mr-2  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 rounded-l-none font-extrabold h-[46px] lg:h-full min-h-[46px]"
+                  onClick={handleClick}
                 >
                   <BsSearch />
                 </button>
