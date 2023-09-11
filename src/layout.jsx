@@ -6,7 +6,7 @@ export const Layout = () => {
   return (
     <Flowbite>
       <Navbar />
-      <main className="min-h-screen dark:bg-[#18202b] dark:text-white bg-white">
+      <main className="min-h-[calc(100vh-80px)] dark:bg-[#18202b] dark:text-white bg-white">
         <Outlet />
       </main>
       <Footer />
