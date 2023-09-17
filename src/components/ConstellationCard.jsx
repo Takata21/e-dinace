@@ -7,7 +7,7 @@ export function ConstellationCard({ constellation, id }) {
   return (
     <Link
       to={`./${constellation.toLowerCase().replace(/\s+/g, '-')}?id=${id}`}
-      className="h-56 group lg:flex-grow"
+      className="h-56 group xl:flex-grow"
     >
       <div className="relative h-full font-semibold tracking-wider text-white uppercase font-Bellefair">
         {isLoading && <CardSkeleton />}

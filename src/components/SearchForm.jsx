@@ -1,6 +1,6 @@
 function SearchForm({ search, handleChange, handleSubmit, searchError }) {
   return (
-    <div className="lg:w-[500px]">
+    <div className="xl:w-[500px]">
       <form onSubmit={handleSubmit}>
         <label
           htmlFor="default-search"

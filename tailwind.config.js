@@ -8,7 +8,12 @@ export default {
   ],
   theme: {
     screens: {
-      lg: '1280px',
+      sxm: { max: '640px' }, // Small screen (mobiles)
+      mxd: { max: '767px' }, // Medium screen (tablets)
+      md: '668px',
+      xl: '1024px', // Large screen (laptops)
+      '1xl': '1280px', // Extra-large screen (desktops)
+      '2xl': '1536px', // Extra-extra-large screen (large displays)
     },
     extend: {
       fontFamily: {

@@ -5,12 +5,12 @@ export const Menu = ({ Menu, handleClick }) => {
     <nav
       className={`${
         Menu ? 'active' : ''
-      } menu lg:flex-[2] lg:justify-end dark:bg-gray-900 dark:text-white`}
+      } menu xl:flex-[2] xl:justify-end dark:bg-gray-900 dark:text-white`}
     >
-      <ul className="flex flex-col h-full p-4 text-center lg:flex-row lg:gap-5 lg:justify-end ">
+      <ul className="flex flex-col h-full p-4 text-center xl:flex-row xl:gap-5 xl:justify-end ">
         <li>
           <a
-            className="block py-4 text-[#0c163b] font-medium text-xl lg:py-0 links-transitions lg:relative dark:text-white"
+            className="block py-4 text-[#0c163b] font-medium text-xl xl:py-0 links-transitions xl:relative dark:text-white"
             href="https://dinace.utp.ac.pa/"
             target="_blank"
             rel="noreferrer"
@@ -20,7 +20,7 @@ export const Menu = ({ Menu, handleClick }) => {
         </li>
         <li>
           <Link
-            className="block py-4 text-[#0c163b] font-medium text-xl lg:py-0 links-transitions lg:relative dark:text-white"
+            className="block py-4 text-[#0c163b] font-medium text-xl xl:py-0 links-transitions xl:relative dark:text-white"
             to="/"
             onClick={() => handleClick()}
           >
@@ -31,7 +31,7 @@ export const Menu = ({ Menu, handleClick }) => {
           <Link
             to="/Ephemeris"
             onClick={() => handleClick()}
-            className="block py-4 text-[#0c163b] font-medium text-xl lg:py-0 links-transitions lg:relative dark:text-white"
+            className="block py-4 text-[#0c163b] font-medium text-xl xl:py-0 links-transitions xl:relative dark:text-white"
           >
             Efemérides
           </Link>
@@ -40,7 +40,7 @@ export const Menu = ({ Menu, handleClick }) => {
           <Link
             to="/constellations"
             onClick={() => handleClick()}
-            className="block py-4 text-[#0c163b] font-medium text-xl lg:py-0 links-transitions lg:relative dark:text-white"
+            className="block py-4 text-[#0c163b] font-medium text-xl xl:py-0 links-transitions xl:relative dark:text-white"
           >
             Constelaciones
           </Link>
@@ -49,7 +49,7 @@ export const Menu = ({ Menu, handleClick }) => {
           <Link
             to="/galaxies"
             onClick={() => handleClick()}
-            className="block py-4 text-[#0c163b] font-medium text-xl lg:py-0 links-transitions lg:relative dark:text-white"
+            className="block py-4 text-[#0c163b] font-medium text-xl xl:py-0 links-transitions xl:relative dark:text-white"
           >
             Galaxias
           </Link>

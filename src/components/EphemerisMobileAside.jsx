@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { useListBodies } from '../hooks/useListBodies'
 import { useEphemerisStore } from '../store/Ephemeris'
-export function EphemerisAside({ handleActive, active }) {
+import { useListBodies } from '../hooks/useListBodies'
+
+export function EphemerisMobileAside({ open, handleClick }) {
   const { fetchEphemeris } = useEphemerisStore()
   const { bodyList, changeMajorBody, majorBodies } = useListBodies()
   const [horizons, setHorizons] = useState({
@@ -15,6 +16,7 @@ export function EphemerisAside({ handleActive, active }) {
   const handleSubmit = async (e) => {
     e.preventDefault()
     fetchEphemeris(horizons)
+    handleClick()
     console.log(horizons)
   }
 
@@ -28,13 +30,18 @@ export function EphemerisAside({ handleActive, active }) {
   return (
     <aside
       className={`${
-        !active && 'hidden invisible '
-      } flex-1 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700 overflow-hidden`}
+        !open && ' top-[9999px] h-0'
+      } flex-1 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700 overflow-hidden position absolute top-14  bottom-0 left-0 right-0 z-10 h-full transition duration-1000`}
     >
       <form className="px-5 py-3" onSubmit={handleSubmit}>
         <div className="">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="font-medium ">Especificar el Cuerpo Celestial</h3>
+            <h3 className="text-sm font-medium">
+              Especificar el Cuerpo Celestial
+            </h3>
+            {/* <button type="button" className="w-8 h-8 " onClick={handleClick}>
+              <TbLayoutSidebarLeftCollapse size={32} />
+            </button> */}
           </div>
           <select
             id="majorBodies"
@@ -74,7 +81,7 @@ export function EphemerisAside({ handleActive, active }) {
           </select>
         </div>
         <div className="">
-          <h3 className="mb-3 font-medium">
+          <h3 className="mb-3 text-sm font-medium">
             Especificar la Ubicación del Observador
           </h3>
           <div className="mb-4">
@@ -118,7 +125,7 @@ export function EphemerisAside({ handleActive, active }) {
           </div>
         </div>
         <div className="">
-          <h3 className="mb-3 font-medium">Especificación de Tiempo</h3>
+          <h3 className="mb-3 text-sm font-medium">Especificación de Tiempo</h3>
           <div className="mb-3">
             <label
               htmlFor="start-time"

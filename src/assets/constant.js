@@ -33,7 +33,7 @@ export const SOLAR_ECLIPSE_TYPES = {
   H: 'Eclipse Híbrido',
 }
 export const Headers = [
-  { original: 'Fecha y Hora', abbreviation: 'FyH' },
+  { original: 'Fecha y Hora', abbreviation: 'Fecha' },
   { original: 'Ascensión Recta', abbreviation: 'AR' },
   { original: 'Declinación', abbreviation: 'Dec' },
   { original: 'Magnitud Aparente del Sol', abbreviation: 'Mag Sol' },

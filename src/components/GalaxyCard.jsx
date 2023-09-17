@@ -7,7 +7,7 @@ export function GalaxiesCard({ galaxy, id }) {
   return (
     <Link
       to={`/galaxies/${galaxy.toLowerCase().replace(/\s+/g, '-')}?id=${id}`}
-      className="h-56 group lg:flex-grow"
+      className="h-56 group xl:flex-grow"
     >
       <div className="relative h-full font-semibold tracking-wider text-white uppercase font-Bellefair">
         {isLoading && <CardSkeleton />}

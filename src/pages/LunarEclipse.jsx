@@ -27,19 +27,19 @@ export function LunarEclipse() {
   } = eclipseInfo
 
   return (
-    <div className="flex flex-col justify-between w-full min-h-screen p-5 text-white bg-white lg:flex-row dark:bg-gray-800">
+    <div className="flex flex-col justify-between w-full min-h-screen p-5 text-white bg-white xl:flex-row dark:bg-gray-800">
       {loading ? (
         <Loader />
       ) : (
         <>
-          <section className="p-3 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:border-gray-700 lg:h-max">
+          <section className="p-3 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:border-gray-700 xl:h-max">
             <div className="dark:text-white">
               <h2>Fecha:</h2>
               <p>{formatEclipseDate({ calendarDate, type: 'long' })}</p>
               <div>
                 <h2>Tipo:</h2>
 
-                <p className="text-lg font-semibold lg:font-bold lg:text-2xl">
+                <p className="text-lg font-semibold xl:font-bold xl:text-2xl">
                   {LUNAR_ECLIPSE_TYPES[eclType]}
                 </p>
               </div>

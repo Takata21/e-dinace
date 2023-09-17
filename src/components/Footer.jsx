@@ -2,15 +2,15 @@ import { FaFacebook, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa6'
 export const Footer = () => {
   const year = new Date().getFullYear()
   return (
-    <footer className="relative flex flex-col-reverse items-center gap-5 px-12 py-5 bg-footer-Bg lg:flex-row">
+    <footer className="relative flex flex-col-reverse items-center gap-5 px-12 py-5 bg-footer-Bg xl:flex-row">
       <div className="flex items-center gap-5">
         <img
           src="/images/logo-footer.png"
           width={100}
           alt="utp logo"
-          className="hidden lg:block lg:w-28"
+          className="hidden xl:block xl:w-28"
         />
-        <div className=" font-medium text-center text-white lg:text-left text-[13px]">
+        <div className=" font-medium text-center text-white xl:text-left text-[13px]">
           <h5>Universidad Tecnológica de Panamá - {year}</h5>
           <p>
             Avenida Universidad Tecnológica de Panamá, Vía Puente Centenario,
@@ -27,7 +27,7 @@ export const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="flex gap-2 lg:absolute right-12 bottom-5">
+      <div className="flex gap-2 xl:absolute right-12 bottom-5">
         <a
           href="https://www.facebook.com/OapUtp"
           className="flex items-center justify-center w-8 h-8 bg-white rounded-full hover:bg-[#29166F] hover:text-white transition-bg duration-500 ease-in-out "

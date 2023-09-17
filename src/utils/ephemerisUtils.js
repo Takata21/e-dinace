@@ -71,9 +71,15 @@ export function csvToObjectArray(info) {
         // Verifica si el valor contiene una coma y un espacio
         if (value.includes(', ')) {
           rowData[columnNames[dataIndex]] = value
+          if (columnNames[dataIndex] === 'tkt') {
+            rowData[columnNames[dataIndex]] = crypto.randomUUID()
+          }
         } else {
           // Si no contiene una coma y un espacio, toma el valor completo
           rowData[columnNames[dataIndex]] = value
+          if (columnNames[dataIndex] === 'tkt') {
+            rowData[columnNames[dataIndex]] = crypto.randomUUID()
+          }
         }
 
         dataIndex++
