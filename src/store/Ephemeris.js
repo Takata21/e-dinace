@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-const URL = 'http://localhost/bridge/'
+const URL = 'https://flat-hare-60.deno.dev/'
 export const useEphemerisStore = create((set) => {
   return {
     loading: false,
