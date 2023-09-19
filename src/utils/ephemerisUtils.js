@@ -32,8 +32,37 @@ export function getPhysicalData(text) {
   })
   return properties
 }
+export function getEphemerisInfo(text) {
+  const dataString = extractContentBetweenMarkers({
+    text,
+    startMarker: 'Ephemeris /',
+    endMarker: 'Table format',
+  })
+
+  // Split the text into lines
+  const lines = dataString.split('\n')
+  console.log(lines)
+
+  // Create an array to store the values
+  const valuesArray = []
+
+  // Iterate over each line
+  for (const line of lines) {
+    // Split the line into key and value using ':'
+    const parts = line.split(/:(?![^{]*})/)
+    if (parts.length === 2) {
+      const value = parts[1].trim()
+      valuesArray.push(value)
+    }
+  }
+  return valuesArray
+}
 export function csvToObjectArray(info) {
-  const csv = extractContentBetweenMarkers(info)
+  const csv = extractContentBetweenMarkers({
+    text: info,
+    startMarker: '$$SOE\n',
+    endMarker: '$$EOE',
+  })
   const lines = csv.split('\n')
   const headers = lines[0].split(',').map((header) => header.trim())
   const data = []
@@ -91,20 +120,24 @@ export function csvToObjectArray(info) {
 
   return data
 }
-export function extractContentBetweenMarkers(text) {
-  // Encuentra el índice de inicio del primer marcador $$SOE
-  const startIndex = text.indexOf('$$SOE\n')
 
-  // Encuentra el índice de inicio del segundo marcador $$EOE, comenzando desde el índice de inicio del primer marcador
-  const endIndex = text.indexOf('$$EOE', startIndex)
+export function extractContentBetweenMarkers({ text, startMarker, endMarker }) {
+  // Encuentra el índice de inicio del primer marcador
+  const startIndex = text.indexOf(startMarker)
+
+  // Encuentra el índice de inicio del segundo marcador, comenzando desde el índice de inicio del primer marcador
+  const endIndex = text.indexOf(endMarker, startIndex)
 
   // Verifica si ambos marcadores existen
   if (startIndex === -1 || endIndex === -1) {
     return null // Si no se encuentran los marcadores, devuelve null
   }
 
-  // Extrae todo el contenido entre los dos marcadores sin incluir $$EOE
-  const contentBetweenMarkers = text.substring(startIndex + 6, endIndex) // Sumamos 6 para omitir $$SOE
+  // Extrae todo el contenido entre los dos marcadores sin incluir el marcador final
+  const contentBetweenMarkers = text.substring(
+    startIndex + startMarker.length,
+    endIndex
+  )
 
   return contentBetweenMarkers
 }
