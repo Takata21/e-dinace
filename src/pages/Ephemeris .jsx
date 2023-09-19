@@ -8,7 +8,6 @@ import {
   EphemerisAside,
   EphemerisMobileAside,
   Loader,
-  EphemerisInfo,
 } from '../components/index'
 export function Ephemeris() {
   const isLargeScreen = window.innerWidth > 768
