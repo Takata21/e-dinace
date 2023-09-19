@@ -1,10 +1,14 @@
 import { Headers } from '../assets/constant'
 import { csvToObjectArray } from '../utils/ephemerisUtils'
+import { EphemerisInfo } from './EphemerisInfo'
 export function CsvTableMobile({ info }) {
   const data = csvToObjectArray(info)
-  console.log(data)
   return (
     <div className="flex flex-col gap-5 px-5">
+      <h2 className="my-2 text-2xl font-bold">
+        Información de Efemérides Generada(s)
+      </h2>
+      <EphemerisInfo />
       {data?.map((ephem, i) => (
         <dl
           key={ephem.tkt}

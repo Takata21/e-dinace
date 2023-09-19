@@ -1,11 +1,16 @@
 import { Headers } from '../assets/constant'
 import { csvToObjectArray } from '../utils/ephemerisUtils'
+import { EphemerisInfo } from './EphemerisInfo'
 
 export function CsvTable({ info }) {
   const data = csvToObjectArray(info)
-  console.log(data)
+
   return (
     <div className="mx-5">
+      <h2 className="my-2 text-2xl font-bold">
+        Información de Efemérides Generada(s)
+      </h2>
+      <EphemerisInfo />
       <table className="w-full mxd:hidden md:overflow-x-auto">
         <thead>
           <tr>
