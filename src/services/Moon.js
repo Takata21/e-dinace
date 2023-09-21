@@ -1,4 +1,6 @@
-export async function getMoon(dateTimeValue) {
+export async function getMoon(
+  dateTimeValue = new Date().toISOString().slice(0, 16)
+) {
   const date = dateTimeValue
   const API_URL = 'https://svs.gsfc.nasa.gov/api/dialamoon'
   return fetch(`${API_URL}/${date}`)

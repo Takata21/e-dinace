@@ -1,8 +1,17 @@
-import React from 'react'
 import { Slider } from '../components'
 import { Link } from 'react-router-dom'
-
+import { useEffect, useState } from 'react'
+import { getMoon } from '../services/Moon'
+import { getLunarPhaseDescription } from '../utils/astronomyUtils'
 export function HomePage() {
+  const [moonPhases, setMoonPhases] = useState()
+  useEffect(() => {
+    const getMoonPhase = async () => {
+      const phase = await getMoon()
+      setMoonPhases(phase)
+    }
+    getMoonPhase()
+  }, [])
   return (
     <div className="relative min-h-screen">
       <Slider />
@@ -10,8 +19,17 @@ export function HomePage() {
         <article className="relative flex justify-between p-6 bg-white border border-gray-200 rounded-lg shadow xl:gap-5 dark:bg-gray-800 dark:border-gray-700">
           <div className="flex flex-col items-center justify-center gap-5 capitalize dark:text-white">
             <h5 className="text-xl font-bold">Fase lunar actual</h5>
-            <img src="./images/moon.png" alt="" width={150} />
-            <span className="text-lg font-bold ">waning crescent</span>
+            <img
+              src={`/images/moon/${getLunarPhaseDescription(
+                moonPhases?.age
+              ).en.replace(/\s+/g, '')}.png`}
+              alt={moonPhases?.image.alt_text}
+              className=""
+              width={150}
+            />
+            <span className="text-lg font-bold ">
+              {getLunarPhaseDescription(moonPhases?.age).es}
+            </span>
           </div>
           <div className="">
             <div className="flex justify-between gap-10 mb-8 xl:gap-5">
@@ -28,8 +46,11 @@ export function HomePage() {
             </div>
           </div>
           <div className="absolute bottom-0 right-0 self-end text-white link-gradient">
-            <Link to="/" className="block px-6 py-3 font-semibold uppercase ">
-              siguiente fase
+            <Link
+              to="/moon-phases"
+              className="block px-6 py-3 font-semibold uppercase "
+            >
+              Ver Más
             </Link>
           </div>
         </article>
