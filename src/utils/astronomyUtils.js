@@ -114,3 +114,31 @@ export function convertMinutesToHMS(minutes) {
 
   return `${hours} h ${remainingMinutes} m ${seconds} s`
 }
+
+export async function findNextEclipses() {
+  try {
+    const module = await import('../assets/NextEclipse.json')
+    const eclipseData = module.default // Accede a los datos del módulo
+
+    const currentDate = new Date()
+
+    const closestType1Eclipse = eclipseData
+      .filter(
+        (eclipse) =>
+          eclipse.type === 1 && new Date(eclipse.calendar_date) > currentDate
+      )
+      .sort((a, b) => new Date(a.calendar_date) - new Date(b.calendar_date))[0]
+
+    const closestType2Eclipse = eclipseData
+      .filter(
+        (eclipse) =>
+          eclipse.type === 2 && new Date(eclipse.calendar_date) > currentDate
+      )
+      .sort((a, b) => new Date(a.calendar_date) - new Date(b.calendar_date))[0]
+
+    return [closestType1Eclipse, closestType2Eclipse]
+  } catch (error) {
+    console.error('Error al cargar el archivo JSON:', error)
+    return []
+  }
+}
