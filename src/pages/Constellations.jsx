@@ -5,6 +5,7 @@ import debounce from 'just-debounce-it'
 import { useSearch } from '../hooks/useSearch'
 import SortSelect from '../components/SortSelect'
 import SearchForm from '../components/SearchForm'
+import { ConstellationFilterOptions } from '../assets/constant'
 
 export function Constellations() {
   const [sort, setSort] = useState('')
@@ -44,7 +45,11 @@ export function Constellations() {
           handleSubmit={handleSubmit}
           searchError={searchError}
         />
-        <SortSelect sort={sort} handleSortChange={handleSortChange} />
+        <SortSelect
+          filter={sort}
+          handleSortChange={handleSortChange}
+          options={ConstellationFilterOptions}
+        />
       </section>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-center w-full min-h-screen gap-5  dark:bg-[#18202b]">
         {loading ? (
