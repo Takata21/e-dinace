@@ -14,6 +14,10 @@ export function EphemerisAside({ handleActive, active }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (horizons.startTime >= horizons.stopTime) {
+      alert('La fecha de inicio debe ser anterior a la fecha final')
+      return // Evita que se realice el envío del formulario
+    }
     fetchEphemeris(horizons)
     console.log(horizons)
   }
