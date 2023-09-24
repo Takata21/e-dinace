@@ -1,13 +1,38 @@
-import eclipsesData from '../assets/lunarEclipses.json'
-import { LunarEclipseCard } from '../components/index'
+import SortSelect from '../components/SortSelect'
+import { Loader, LunarEclipseCard } from '../components/index'
+import { lunarEclipseTypesOptions } from '../assets/constant'
+import { useState } from 'react'
+import { useLunarEclipses } from '../hooks/useLunarEclipses'
 
 export function LunarEclipses() {
+  const [filter, setSort] = useState('')
+  // eslint-disable-next-line no-unused-vars
+  const { eclipses, error, loading } = useLunarEclipses({ filter })
+  const handleSortChange = (event) => {
+    setSort(event.target.value)
+  }
   return (
     <div className="py-5">
+      <section className="mx-5 mb-5">
+        <h2 className="text-xl font-semibold ">Eclipses Lunares</h2>
+        <SortSelect
+          filter={filter}
+          handleSortChange={handleSortChange}
+          options={lunarEclipseTypesOptions}
+          title="Filtrar"
+        />
+        <h3 className="font-semibold">Totales: {eclipses?.length}</h3>
+      </section>
       <div className=" justify-center grid gap-5 xl:gap-10 px-5 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
-        {eclipsesData?.map((eclipse) => {
-          return <LunarEclipseCard key={eclipse.seq_num} eclipse={eclipse} />
-        })}
+        {loading ? (
+          <div className="relative h-full">
+            <Loader />
+          </div>
+        ) : (
+          eclipses?.map((eclipse) => {
+            return <LunarEclipseCard key={eclipse.seq_num} eclipse={eclipse} />
+          })
+        )}
       </div>
     </div>
   )
