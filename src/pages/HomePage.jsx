@@ -120,7 +120,7 @@ export function HomePage() {
               )}
               {moonPhases !== null && (
                 <img
-                  src="/public/images/eclipse-solar.jpg"
+                  src="/images/eclipse-solar.jpg"
                   alt="solar eclipse images"
                   className="rounded-full"
                   width={150}

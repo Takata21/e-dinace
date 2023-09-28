@@ -23,6 +23,7 @@ export function EphemerisAside({ handleActive, active }) {
   }
 
   const onInputChange = (e) => {
+    console.log(bodyList)
     const { name, value } = e.target
     setHorizons((prev) => ({
       ...prev,

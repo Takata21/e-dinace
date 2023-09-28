@@ -23,17 +23,18 @@ export function SolarEclipses() {
         />
         <h3 className="font-semibold">Totales: {eclipses?.length}</h3>
       </section>
-      <div className=" justify-center grid gap-5 xl:gap-10 px-5 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
-        {loading ? (
-          <div className="relative h-full">
-            <Loader />
-          </div>
-        ) : (
-          eclipses?.map((eclipse) => {
+
+      {loading ? (
+        <div className="relative flex w-full min-h-[calc(100vh-80px)]">
+          <Loader />
+        </div>
+      ) : (
+        <div className=" justify-center grid gap-5 xl:gap-10 px-5 grid-cols-[repeat(auto-fill,minmax(300px,1fr))] min-h-[calc(100vh-380px)]">
+          {eclipses?.map((eclipse) => {
             return <EclipseCard key={eclipse.seq_num} eclipse={eclipse} />
-          })
-        )}
-      </div>
+          })}
+        </div>
+      )}
     </div>
   )
 }
