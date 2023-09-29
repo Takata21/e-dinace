@@ -1,7 +1,7 @@
 import { Menu } from './index'
 import { CgMenuRightAlt, CgClose } from 'react-icons/cg'
 import { useState } from 'react'
-import { DarkThemeToggle } from 'flowbite-react'
+import { DarkThemeToggle } from './DarkThemeToggle'
 
 export const Navbar = () => {
   const [menu, setMenu] = useState(false)
