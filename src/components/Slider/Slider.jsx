@@ -1,15 +1,39 @@
-import { Carousel } from 'flowbite-react'
-import { VideoBackground } from './index'
-import { FaArrowRightLong } from 'react-icons/fa6'
+import { useState, useEffect } from 'react'
+import { MdEast, MdWest } from 'react-icons/md'
+
+import styles from './Slider.module.css'
+import { VideoBackground } from '../VideoBackground'
 import { Link } from 'react-router-dom'
-export const Slider = () => {
+import { FaArrowRightLong } from 'react-icons/fa6'
+export const Carousel = () => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide()
+    }, 5000)
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [currentSlide])
+  const prevSlide = () => {
+    setCurrentSlide(currentSlide === 0 ? 4 : (prev) => prev - 1)
+  }
+
+  const nextSlide = () => {
+    setCurrentSlide(currentSlide === 4 ? 0 : (prev) => prev + 1)
+  }
+
   return (
-    <div className="relative h-80 xl:h-[calc(100vh-80px)]">
-      <Carousel
-        slideInterval={6000}
-        className="relative h-80 carousel xl:h-full"
+    <div className={styles.slider}>
+      <div
+        className={styles.container}
+        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
-        <div className="flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5">
+        <div
+          className={`${styles.slide}  relative flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5`}
+        >
           <VideoBackground source="/videos/milky_way_glowing_at_night.mp4" />
           <h3 className="text-[#da374f] font-Space text-xl font-bold block uppercase text-left w-full tracking-[3px] xl:text-3xl">
             {/* DESCUBRE CONFINES ESTELARES. */}
@@ -23,7 +47,9 @@ export const Slider = () => {
             <FaArrowRightLong className="arrow xl:my-5" color="#da374f" />
           </Link>
         </div>
-        <div className="flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5">
+        <div
+          className={`${styles.slide}  relative flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5`}
+        >
           <VideoBackground source="/videos/constellations.mp4" />
           <h3 className="text-[#da374f] font-Space text-xl font-bold block uppercase text-left w-full tracking-[3px] xl:text-3xl">
             Constelaciones
@@ -36,7 +62,9 @@ export const Slider = () => {
             <FaArrowRightLong className="arrow xl:my-5" color="#da374f" />
           </Link>
         </div>
-        <div className="flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5">
+        <div
+          className={`${styles.slide}  relative flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5`}
+        >
           <VideoBackground source="/videos/galaxy.mp4" />
           <h3 className="text-[#da374f] font-Space text-xl font-bold block uppercase text-left w-full tracking-[3px] xl:text-3xl">
             Galaxias
@@ -49,7 +77,9 @@ export const Slider = () => {
             <FaArrowRightLong className="arrow xl:my-5" color="#da374f" />
           </Link>
         </div>
-        <div className="flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5">
+        <div
+          className={`${styles.slide}  relative flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5`}
+        >
           <VideoBackground source="/videos/eclipse.mp4" />
           <h3 className="text-[#da374f] font-Space text-xl font-bold block uppercase text-left w-full tracking-[3px] xl:text-3xl">
             Eclipses
@@ -62,7 +92,9 @@ export const Slider = () => {
             <FaArrowRightLong className="arrow xl:my-5" color="#da374f" />
           </Link>
         </div>
-        <div className="flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5">
+        <div
+          className={`${styles.slide}  relative flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5`}
+        >
           <VideoBackground source="/videos/MoonPhase.mp4" />
           <h3 className="text-[#da374f] font-Space text-xl font-bold block uppercase text-left w-full tracking-[3px] xl:text-3xl">
             Fases de la Luna
@@ -75,7 +107,15 @@ export const Slider = () => {
             <FaArrowRightLong className="arrow xl:my-5" color="#da374f" />
           </Link>
         </div>
-      </Carousel>
+      </div>
+      <div className={styles.icons}>
+        <div className={styles.icon} onClick={prevSlide}>
+          <MdWest />
+        </div>
+        <div className={styles.icon} onClick={nextSlide}>
+          <MdEast />
+        </div>
+      </div>
     </div>
   )
 }

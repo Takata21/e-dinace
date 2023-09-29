@@ -4,83 +4,7 @@
 
 :root {
     --footer-bg-color: #777;
-
-
 }
-
-/* 
-@font-face {
-    font-family: 'Metropolis';
-    src: url('./assets/fonts/Metropolis-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-
-}
-
-@font-face {
-    font-family: 'Metropolis';
-    src: url('./assets/fonts/Metropolis-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-
-}
-
-@font-face {
-    font-family: 'Metropolis';
-    src: url('./assets/fonts/Metropolis-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-
-}
-
-@font-face {
-    font-family: 'Bellefair';
-    src: url('./assets/fonts/Bellefair-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-
-}
-
-@font-face {
-    font-family: 'Antonio';
-    src: url('./assets/fonts/Antonio-Regular.ttf') format('ttf');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-
-}
-
-@font-face {
-    font-family: 'Antonio';
-    src: url('./assets/fonts/Antonio-Medium.ttf') format('ttf');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-
-}
-
-@font-face {
-    font-family: 'Antonio';
-    src: url('./assets/fonts/Antonio-SemiBold.ttf') format('ttf');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-
-}
-
-@font-face {
-    font-family: 'Antonio';
-    src: url('./assets/fonts/Antonio-Bold.ttf') format('ttf');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-
-} */
-
 
 html,
 body {
@@ -141,11 +65,6 @@ body {
     }
 }
 
-
-
-
-
-
 .links-transitions {
     transition: font-weight 1s ease-in;
 
@@ -177,8 +96,6 @@ body {
     background: linear-gradient(177deg, rgba(0, 0, 0, 1) 2%, rgba(0, 0, 0, 0.603448275862069) 20%, rgba(0, 0, 0, 0.5086206896551724) 50%, rgba(0, 0, 0, 0.43534482758620685) 79%, rgba(0, 0, 0, 0.7413793103448276) 98%);
 
 }
-
-
 
 .carousel div {
     border: none;
@@ -220,8 +137,6 @@ body {
 
 }
 
-
-
 .link-gradient {
     background: rgb(59, 130, 246);
     background: to right, rgb(56, 189, 248) 0%, rgb(59, 130, 246);
@@ -234,6 +149,4 @@ body {
     cursor: pointer;
     background-image: url('/public/images/calendar.svg');
     color: white;
-
-
 }

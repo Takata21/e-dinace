@@ -1,4 +1,4 @@
-import { ImageSkeleton, Slider } from '../components'
+import { ImageSkeleton, Carousel } from '../components'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import {
@@ -19,8 +19,8 @@ export function HomePage() {
   }, [])
 
   return (
-    <div className="relative min-h-screen">
-      <Slider />
+    <div className="relative min-h-screen overflow-x-hidden">
+      <Carousel />
       <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 my-5 g font-Space p-4">
         <article className="relative flex justify-between p-3 bg-white border border-gray-200 rounded-lg shadow xl:gap-5 dark:bg-gray-800 dark:border-gray-700">
           <div className="flex flex-col items-center justify-center gap-5 capitalize dark:text-white">
