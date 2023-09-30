@@ -7,5 +7,5 @@ export function useGalaxy({ id }) {
     fetchGalaxyInfo(id)
   }, [id, fetchGalaxyInfo])
 
-  return { galaxyInfo: { ...galaxyInfo[0] }, loading, messageError }
+  return { galaxyInfo, loading, messageError }
 }

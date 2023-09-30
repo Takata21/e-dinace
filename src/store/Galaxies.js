@@ -9,6 +9,7 @@ export const useGalaxyStore = create((Set) => ({
       const module = await import('../assets/Galaxies.json')
       const galaxies = module.default
       const foundGalaxy = galaxies.filter((galaxy) => galaxy.id === id)
+
       if (foundGalaxy) {
         Set({ galaxyInfo: foundGalaxy })
       } else {
