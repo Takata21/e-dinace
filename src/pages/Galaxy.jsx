@@ -3,12 +3,10 @@ import { Loader, InfoCard } from '../components'
 import Zoom from 'react-medium-image-zoom'
 import '../image-zoom.css'
 export function Galaxy() {
-  const url = window.location.search.split('=')[1]
-  const { galaxyInfo, loading } = useGalaxy({
-    id: url,
-  })
+  const urlSearchParams = new URLSearchParams(window.location.search)
+  const id = urlSearchParams.get('id')
+  const { galaxyInfo, loading } = useGalaxy(id)
   const galaxy = galaxyInfo[0]
-  console.log(galaxy)
   return (
     <div className="px-5 dark:text-white xl:px-24 constellation bg-[#fafafa] dark:bg-gray-800">
       {loading ? (

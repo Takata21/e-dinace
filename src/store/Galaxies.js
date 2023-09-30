@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
 export const useGalaxyStore = create((Set) => ({
-  galaxyInfo: null,
+  galaxyInfo: [],
   loading: true,
   messageError: '',
   fetchGalaxyInfo: async (id) => {
@@ -9,7 +9,6 @@ export const useGalaxyStore = create((Set) => ({
       const module = await import('../assets/Galaxies.json')
       const galaxies = module.default
       const foundGalaxy = galaxies.filter((galaxy) => galaxy.id === id)
-
       if (foundGalaxy) {
         Set({ galaxyInfo: foundGalaxy })
       } else {

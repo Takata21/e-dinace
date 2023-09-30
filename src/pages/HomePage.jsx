@@ -14,7 +14,6 @@ export function HomePage() {
     return async () => {
       const eclipses = await findNextEclipses()
       setNextEclipses(eclipses)
-      console.log(nextEclipses)
     }
   }, [])
 

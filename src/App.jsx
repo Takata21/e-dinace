@@ -37,7 +37,7 @@ function App() {
           element: <Galaxies />,
         },
         {
-          path: '/galaxies/:name',
+          path: '/galaxies/:id',
           element: <Galaxy />,
         },
         {

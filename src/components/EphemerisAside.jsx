@@ -19,11 +19,9 @@ export function EphemerisAside({ handleActive, active }) {
       return // Evita que se realice el envío del formulario
     }
     fetchEphemeris(horizons)
-    console.log(horizons)
   }
 
   const onInputChange = (e) => {
-    console.log(bodyList)
     const { name, value } = e.target
     setHorizons((prev) => ({
       ...prev,

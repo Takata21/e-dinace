@@ -35,7 +35,6 @@ export const useEphemerisStore = create((set) => {
         }
         const data = await response.json()
         set({ ephemeris: data })
-        console.log(data)
         return data
       } catch (error) {
         console.log(error)

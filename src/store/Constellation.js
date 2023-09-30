@@ -11,7 +11,6 @@ export const useConstellationStore = create((Set) => ({
       const foundConstellation = constellations.filter(
         (constellation) => constellation.id === id
       )
-      console.log('--------------------', foundConstellation)
       if (foundConstellation) {
         const {
           id,

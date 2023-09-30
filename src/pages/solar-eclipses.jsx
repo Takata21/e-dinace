@@ -7,7 +7,6 @@ export function SolarEclipses() {
   const [filter, setFilter] = useState('')
   // eslint-disable-next-line no-unused-vars
   const { eclipses, error, loading } = useSolarEclipses({ filter })
-  // console.log(eclipses)
   const handleSortChange = (event) => {
     setFilter(event.target.value)
   }

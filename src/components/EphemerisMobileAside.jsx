@@ -17,7 +17,6 @@ export function EphemerisMobileAside({ open, handleClick }) {
     e.preventDefault()
     fetchEphemeris(horizons)
     handleClick()
-    console.log(horizons)
   }
 
   const onInputChange = (e) => {
