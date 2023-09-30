@@ -108,14 +108,14 @@ export const Carousel = () => {
           </Link>
         </div>
       </div>
-      <div className={styles.icons}>
+      {/* <div className={styles.icons}>
         <div className={styles.icon} onClick={prevSlide}>
           <MdWest />
         </div>
         <div className={styles.icon} onClick={nextSlide}>
           <MdEast />
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
