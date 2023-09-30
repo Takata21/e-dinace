@@ -12,6 +12,7 @@ import {
   SolarEclipse,
   LunarEclipse,
   Ephemeris,
+  TermsOfUse,
 } from './pages/index'
 
 function App() {
@@ -64,6 +65,10 @@ function App() {
         {
           path: '/Ephemeris',
           element: <Ephemeris />,
+        },
+        {
+          path: '/disclaimer',
+          element: <TermsOfUse />,
         },
       ],
     },

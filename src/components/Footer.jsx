@@ -1,4 +1,5 @@
 import { FaFacebook, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 export const Footer = () => {
   const year = new Date().getFullYear()
   return (
@@ -25,6 +26,9 @@ export const Footer = () => {
             Correo electrónico: <br className="md:hidden" />
             buzondesugerencias@utp.ac.pa
           </p>
+          <Link to="/disclaimer" className="underline">
+            Términos de Uso{' '}
+          </Link>
         </div>
       </div>
       <div className="flex gap-2 xl:absolute right-12 bottom-5">
