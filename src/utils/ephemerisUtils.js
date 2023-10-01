@@ -79,7 +79,7 @@ export function csvToObjectArray(info) {
     'tkt',
   ]
 
-  for (let i = 1; i < lines.length; i++) {
+  for (let i = 0; i < lines.length; i++) {
     const currentLine = lines[i].split(',').map((cell) => cell.trim())
 
     // Comprueba si la fila actual está vacía (todos los valores son vacíos o comas)
