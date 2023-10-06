@@ -51,7 +51,10 @@ export function Constellations() {
           options={ConstellationFilterOptions}
         />
       </section>
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-center w-full min-h-screen gap-5  dark:bg-[#18202b]">
+      <div
+        className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-center w-full min-h-screen gap-5  dark:bg-[#18202b]"
+        data-test-id="constellations"
+      >
         {loading ? (
           <div className="relative h-full">
             <Loader />
