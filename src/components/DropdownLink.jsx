@@ -20,7 +20,7 @@ export function DropdownLink({ title, close }) {
       <div
         className={`${
           show
-            ? 'block z-10  font-normal bg-white divide-y divide-gray-100 rounded-sm shadow dark:bg-gray-700 dark:divide-gray-600 absolute   w-56 right-0 pbr'
+            ? 'block z-10  font-normal bg-white divide-y divide-gray-100 rounded-sm shadow dark:bg-gray-700 dark:divide-gray-600 absolute   w-56 right-0 '
             : 'hidden'
         } `}
       >
