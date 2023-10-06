@@ -21,7 +21,10 @@ export function HomePage() {
     <div className="relative min-h-screen overflow-x-hidden">
       <Carousel />
       <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 my-5 g font-Space p-4">
-        <article className="relative flex justify-between p-3 bg-white border border-gray-200 rounded-lg shadow xl:gap-5 dark:bg-gray-800 dark:border-gray-700">
+        <article
+          className="relative flex justify-between p-3 bg-white border border-gray-200 rounded-lg shadow xl:gap-5 dark:bg-gray-800 dark:border-gray-700"
+          data-test-id="moon-phase"
+        >
           <div className="flex flex-col items-center justify-center gap-5 capitalize dark:text-white">
             <h5 className="text-xl font-bold">Fase lunar </h5>
             <div className="relative h-full my-5 min-h-[150px] min-w-[150px]">
@@ -65,7 +68,10 @@ export function HomePage() {
                   <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-10 "></div>
                 </div>
               ) : (
-                <p className="text-[#a4b0c0] font-semibold">
+                <p
+                  className="text-[#a4b0c0] font-semibold"
+                  data-test-id="angle"
+                >
                   {moonPhases?.posangle}°
                 </p>
               )}
@@ -80,7 +86,10 @@ export function HomePage() {
                   <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-10 "></div>
                 </div>
               ) : (
-                <p className="text-[#a4b0c0] font-semibold">
+                <p
+                  className="text-[#a4b0c0] font-semibold"
+                  data-test-id="phase"
+                >
                   {moonPhases?.phase} %
                 </p>
               )}
@@ -95,7 +104,10 @@ export function HomePage() {
                   <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-20 "></div>
                 </div>
               ) : (
-                <p className="text-[#a4b0c0] font-semibold">{`${days}d ${hours}h ${minutes}m`}</p>
+                <p
+                  className="text-[#a4b0c0] font-semibold"
+                  data-test-id="age"
+                >{`${days}d ${hours}h ${minutes}m`}</p>
               )}
             </div>
           </div>
@@ -108,7 +120,10 @@ export function HomePage() {
             </Link>
           </div>
         </article>
-        <article className="relative flex justify-between p-3 bg-white border border-gray-200 rounded-lg shadow xl:gap-5 dark:bg-gray-800 dark:border-gray-700">
+        <article
+          className="relative flex justify-between p-3 bg-white border border-gray-200 rounded-lg shadow xl:gap-5 dark:bg-gray-800 dark:border-gray-700"
+          data-test-id="solar-eclipse"
+        >
           <div className="flex flex-col items-center justify-center gap-5 capitalize dark:text-white mxd:max-w-[150px]">
             <h5 className="text-lg font-bold">Proximo Eclipse Solar </h5>
             <div className="relative h-full my-5 min-h-[150px] min-w-[150px]">
@@ -150,7 +165,7 @@ export function HomePage() {
                   <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-10 "></div>
                 </div>
               ) : (
-                <p className="text-[#a4b0c0] font-medium">
+                <p data-test-id="date" className="text-[#a4b0c0] font-medium">
                   {nextEclipses[0]?.calendar_date}
                 </p>
               )}
@@ -165,7 +180,7 @@ export function HomePage() {
                   <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-10 "></div>
                 </div>
               ) : (
-                <p className="text-[#a4b0c0] font-semibold">
+                <p data-test-id="hour" className="text-[#a4b0c0] font-semibold">
                   {nextEclipses[0]?.td_of_greatest_eclipse}
                 </p>
               )}
@@ -180,8 +195,10 @@ export function HomePage() {
                   <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-20 "></div>
                 </div>
               ) : (
-                <p className="text-[#a4b0c0] font-semibold">
-                  {' '}
+                <p
+                  data-test-id="duration"
+                  className="text-[#a4b0c0] font-semibold"
+                >
                   {nextEclipses[0]?.duration}
                 </p>
               )}
@@ -196,7 +213,11 @@ export function HomePage() {
             </Link>
           </div>
         </article>
-        <article className="relative flex justify-between p-3 bg-white border border-gray-200 rounded-lg shadow xl:gap-5 dark:bg-gray-800 dark:border-gray-700">
+
+        <article
+          className="relative flex justify-between p-3 bg-white border border-gray-200 rounded-lg shadow xl:gap-5 dark:bg-gray-800 dark:border-gray-700"
+          data-test-id="lunar-eclipse"
+        >
           <div className="flex flex-col items-center justify-center gap-5 capitalize dark:text-white mxd:max-w-[150px]">
             <h5 className="text-lg font-bold">Proximo Eclipse Lunar </h5>
             <div className="relative h-full my-5 min-h-[150px] min-w-[150px]">
@@ -238,7 +259,7 @@ export function HomePage() {
                   <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-10 "></div>
                 </div>
               ) : (
-                <p className="text-[#a4b0c0] font-medium">
+                <p data-test-id="date" className="text-[#a4b0c0] font-medium">
                   {nextEclipses[1]?.calendar_date}
                 </p>
               )}
@@ -253,7 +274,7 @@ export function HomePage() {
                   <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-10 "></div>
                 </div>
               ) : (
-                <p className="text-[#a4b0c0] font-semibold">
+                <p data-test-id="hour" className="text-[#a4b0c0] font-semibold">
                   {nextEclipses[1]?.td_of_greatest_eclipse}
                 </p>
               )}
@@ -268,7 +289,10 @@ export function HomePage() {
                   <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-20 "></div>
                 </div>
               ) : (
-                <p className="text-[#a4b0c0] font-semibold">
+                <p
+                  data-test-id="duration"
+                  className="text-[#a4b0c0] font-semibold"
+                >
                   {nextEclipses[1]?.duration}
                 </p>
               )}

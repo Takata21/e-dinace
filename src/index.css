@@ -24,6 +24,7 @@ body {
     margin: auto;
     height: 100%;
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 main {
@@ -66,7 +67,7 @@ body {
 
 }
 
-@media screen and (min-width:1280px) {
+@media screen and (min-width:1024px) {
     .menu {
         visibility: visible;
         margin-top: 0;

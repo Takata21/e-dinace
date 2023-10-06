@@ -9,7 +9,7 @@ export function DropdownLink({ title, close }) {
     close()
   }
   return (
-    <li className="relative">
+    <li className="">
       <button
         className="flex items-center justify-between mx-auto text-xl font-medium text-gray-900 rounded md:border-0 md:p-0 md:w-auto dark:text-white dark:focus:text-white dark:border-gray-700"
         onClick={() => setShow((prev) => !prev)}
@@ -20,8 +20,8 @@ export function DropdownLink({ title, close }) {
       <div
         className={`${
           show
-            ? 'block z-10  font-normal bg-white divide-y divide-gray-100 rounded-sm shadow dark:bg-gray-700 dark:divide-gray-600 absolute left-0 right-0 w-56 mx-auto'
-            : 'hidden z-10  font-normal bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600'
+            ? 'block z-10  font-normal bg-white divide-y divide-gray-100 rounded-sm shadow dark:bg-gray-700 dark:divide-gray-600 absolute   w-56 right-0 pbr'
+            : 'hidden'
         } `}
       >
         <ul className="py-2 text-xl font-medium text-gray-700 dark:text-white">
