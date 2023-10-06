@@ -7,7 +7,7 @@ export const Menu = ({ Menu, handleClick }) => {
         Menu ? 'active' : ''
       } menu xl:flex-[2] xl:justify-end dark:bg-gray-900 dark:text-white`}
     >
-      <ul className="flex flex-col h-full p-4 text-center xl:flex-row xl:gap-5 xl:justify-end ">
+      <ul className="relative flex flex-col h-full p-4 text-center xl:flex-row xl:gap-5 xl:justify-end">
         <li>
           <a
             className="block py-4 text-[#0c163b] font-medium text-xl xl:py-0 links-transitions xl:relative dark:text-white"
@@ -54,7 +54,7 @@ export const Menu = ({ Menu, handleClick }) => {
             Galaxias
           </Link>
         </li>
-        <DropdownLink title="Eventos Astronómicos" close={handleClick} />
+        <DropdownLink title="Astronomía" close={handleClick} />
       </ul>
     </nav>
   )
