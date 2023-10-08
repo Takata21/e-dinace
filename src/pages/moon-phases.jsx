@@ -1,28 +1,20 @@
-/* eslint-disable no-unused-vars */
 import {
   convertAge,
   formatCoordinates,
   formatGeographicCoordinates,
   getLunarPhaseDescription,
 } from '../utils/astronomyUtils'
-import { BsSearch, BsCalendarEvent } from 'react-icons/bs'
-import { useQuery } from '@tanstack/react-query'
-import { getMoon } from '../services/Moon'
+import { BsSearch } from 'react-icons/bs'
 import { Loader, ImageSkeleton } from '../components/index'
 import { useState, useRef } from 'react'
+import { useMoon } from '../hooks/useMoonPhases'
 export function MoonPhases() {
   const inputRef = useRef(null)
-  const [SelectedDate, setSelectedDate] = useState(
+  const [selectedDate, setSelectedDate] = useState(
     new Date().toISOString().slice(0, 16)
   )
-  const [dateTimeValue, setDateTimeValue] = useState(
-    new Date().toISOString().slice(0, 16)
-  )
+  const { isLoading, error, data, setDateTimeValue } = useMoon()
   const [isImageLoading, setIsImageLoading] = useState(true)
-  const { isLoading, error, data, refetch } = useQuery({
-    queryKey: ['moonPhases', dateTimeValue],
-    queryFn: () => getMoon(dateTimeValue || new Date()),
-  })
   const EARTH_DIAMETER = 12742
 
   const { days, hours, minutes } = convertAge(data?.age)
@@ -44,6 +36,14 @@ export function MoonPhases() {
     <div className="flex flex-col justify-between w-full min-h-screen p-5 text-white bg-black xl:flex-row">
       {isLoading ? (
         <Loader />
+      ) : error ? (
+        <div
+          className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+          role="alert"
+        >
+          <strong className="font-bold">Error:</strong>
+          <span className="block sm:inline">{error}</span>
+        </div>
       ) : (
         <>
           <section>
@@ -102,7 +102,7 @@ export function MoonPhases() {
                   id="date-time-input"
                   className="bg-gray-700 border w-full p-2.5 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 rounded rounded-r-none "
                   ref={inputRef}
-                  value={SelectedDate}
+                  value={selectedDate}
                   onKeyDown={handleKeyDown}
                   onChange={handleChange}
                 />
