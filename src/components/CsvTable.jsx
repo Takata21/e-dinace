@@ -11,7 +11,10 @@ export function CsvTable({ info }) {
         Información de Efemérides Generada(s)
       </h2>
       <EphemerisInfo />
-      <table className="w-full mxd:hidden md:overflow-x-auto">
+      <table
+        className="w-full mxd:hidden md:overflow-x-auto"
+        data-testid="ephemeris-result"
+      >
         <thead>
           <tr>
             {Headers.map((text, index) => (
