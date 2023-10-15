@@ -58,10 +58,14 @@ export function LunarEclipse() {
               alt=""
               className="h-full rounded"
               onLoad={() => setIsImageLoading(false)}
+              data-testid="lunar-eclipse-image"
             />
           </div>
           <section className="flex flex-col gap-8 text-black bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:border-gray-700">
-            <div className="flex flex-col gap-5 p-5 dark:text-white">
+            <div
+              className="flex flex-col gap-5 p-5 dark:text-white"
+              data-testid="lunar-eclipse-info"
+            >
               <div className="flex flex-col gap-2">
                 <h2 className="font-semibold dark:text-gray-200">
                   Fecha en el Calendario:

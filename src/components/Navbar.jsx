@@ -24,6 +24,8 @@ export const Navbar = () => {
             <img
               src="/images/dinace_logo.png"
               className="h-16 mr-1"
+              height="64px"
+              width="64px"
               alt="dinace Logo"
             />
             <div>
@@ -41,6 +43,8 @@ export const Navbar = () => {
             <button
               className="p-2 text-gray-500 rounded cursor-pointer xl:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               onClick={() => handleClick()}
+              name="menu-button"
+              aria-label="Menu"
             >
               {menu ? <CgClose size={24} /> : <CgMenuRightAlt size={24} />}
             </button>
