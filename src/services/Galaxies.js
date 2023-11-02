@@ -7,7 +7,7 @@ export async function getAllGalaxies({ search }) {
     }
     if (search) {
       const foundGalaxies = cachedData.filter((galaxy) =>
-        galaxy.galaxy.original.toLowerCase().startsWith(search.toLowerCase())
+        galaxy.galaxy.translation.toLowerCase().startsWith(search.toLowerCase())
       )
       return foundGalaxies
     } else {

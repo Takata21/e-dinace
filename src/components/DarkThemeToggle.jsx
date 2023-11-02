@@ -9,10 +9,10 @@ export function DarkThemeToggle() {
       type="button"
       name="theme-toggle"
       aria-label="Cambiar tema"
-      className="rounded-lg p-2.5 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+      className="rounded-lg p-2.5 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700 "
       onClick={() => toggleTheme()}
     >
-      {theme === 'light' ? <BiSolidMoon /> : <BiSolidSun />}
+      {theme === 'light' ? <BiSolidMoon size={24} /> : <BiSolidSun size={24} />}
     </button>
   )
 }

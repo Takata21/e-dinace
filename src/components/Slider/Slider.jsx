@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
-import { MdEast, MdWest } from 'react-icons/md'
 
 import styles from './Slider.module.css'
 import { VideoBackground } from '../VideoBackground'
 import { Link } from 'react-router-dom'
 import { FaArrowRightLong } from 'react-icons/fa6'
+import { Info } from '../Info'
 export const Carousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(4)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,7 +36,6 @@ export const Carousel = () => {
         >
           <VideoBackground source="/videos/milky_way_glowing_at_night.mp4" />
           <h3 className="text-[#da374f] font-Space text-xl font-bold block uppercase text-left w-full tracking-[3px] xl:text-3xl">
-            {/* DESCUBRE CONFINES ESTELARES. */}
             Efemérides
           </h3>
           <Link
@@ -46,6 +45,7 @@ export const Carousel = () => {
             Explorando el Calendario Cósmico, Tras los Pasos de los Astros
             <FaArrowRightLong className="arrow xl:my-5" color="#da374f" />
           </Link>
+          <div className="absolute bottom-2 right-1"></div>
         </div>
         <div
           className={`${styles.slide}  relative flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5`}
@@ -61,6 +61,7 @@ export const Carousel = () => {
             Las Constelaciones nos Guían{' '}
             <FaArrowRightLong className="arrow xl:my-5" color="#da374f" />
           </Link>
+          <div className="absolute bottom-2 right-1"></div>
         </div>
         <div
           className={`${styles.slide}  relative flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5`}
@@ -76,6 +77,9 @@ export const Carousel = () => {
             NAVEGA ENTRE LAS CONSTELACIONES DE GALAXIAS
             <FaArrowRightLong className="arrow xl:my-5" color="#da374f" />
           </Link>
+          <div className="absolute bottom-2 right-3">
+            <Info info="NASA" title="Image credit" />
+          </div>
         </div>
         <div
           className={`${styles.slide}  relative flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5`}
@@ -91,6 +95,9 @@ export const Carousel = () => {
             ENTRE LUZ Y SOMBRA{' '}
             <FaArrowRightLong className="arrow xl:my-5" color="#da374f" />
           </Link>
+          <div className="absolute bottom-2 right-3">
+            <Info info="NASA" title="Image credit" />
+          </div>
         </div>
         <div
           className={`${styles.slide}  relative flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5`}
@@ -103,9 +110,12 @@ export const Carousel = () => {
             to="/moon-phases"
             className="w-full text-2xl font-semibold text-white text-gradient xl:text-5xl xl:w-[620px]"
           >
-            EXPLORA LAS FASES OCULTAS DE LA LUNA{' '}
+            EXPLORA LAS FASES OCULTAS DE LA LUNA
             <FaArrowRightLong className="arrow xl:my-5" color="#da374f" />
           </Link>
+          <div className="absolute bottom-2 right-3">
+            <Info info="NASA" title="Image credit" />
+          </div>
         </div>
       </div>
       {/* <div className={styles.icons}>
