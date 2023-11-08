@@ -2,6 +2,7 @@ import { Menu } from './index'
 import { CgMenuRightAlt, CgClose } from 'react-icons/cg'
 import { useState } from 'react'
 import { DarkThemeToggle } from './DarkThemeToggle'
+import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
   const [menu, setMenu] = useState(false)
@@ -15,12 +16,7 @@ export const Navbar = () => {
     <header className="h-20 p-4 bg-white border-gray-200 dark:bg-gray-900">
       <div className="relative z-50 flex flex-wrap items-center justify-between h-full mx-auto max-w-screen-1xl xl:flex-row xl:flex-nowrap dark:text-white">
         <div className="flex items-center justify-between w-full xl:w-auto xl:flex-1">
-          <a
-            href="https://dinace.utp.ac.pa/"
-            className="flex items-center"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <Link to="/" className="flex items-center">
             <img
               src="/images/dinace_logo.png"
               className="h-16 mr-1"
@@ -37,7 +33,7 @@ export const Navbar = () => {
                 Espaciales
               </h2>
             </div>
-          </a>
+          </Link>
           <div className="xl:mr-4">
             <DarkThemeToggle />
             <button

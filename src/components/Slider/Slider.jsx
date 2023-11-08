@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-
 import styles from './Slider.module.css'
 import { VideoBackground } from '../VideoBackground'
 import { Link } from 'react-router-dom'
@@ -47,7 +46,7 @@ export const Carousel = () => {
           </Link>
           <div className="absolute bottom-2 right-1"></div>
         </div>
-        <div
+        {/* <div
           className={`${styles.slide}  relative flex flex-col items-end justify-end h-full pl-5 text-left pb-9 xl:justify-center xl:items-start xl:gap-5`}
         >
           <VideoBackground source="/videos/constellations.mp4" />
@@ -116,7 +115,7 @@ export const Carousel = () => {
           <div className="absolute bottom-2 right-3">
             <Info info="NASA" title="Image credit" />
           </div>
-        </div>
+        </div> */}
       </div>
       {/* <div className={styles.icons}>
         <div className={styles.icon} onClick={prevSlide}>
