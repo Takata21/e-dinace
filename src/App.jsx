@@ -13,6 +13,7 @@ import {
   LunarEclipse,
   Ephemeris,
   TermsOfUse,
+  Planets,
 } from './pages/index'
 
 function App() {
@@ -69,6 +70,10 @@ function App() {
         {
           path: '/disclaimer',
           element: <TermsOfUse />,
+        },
+        {
+          path: '/planets',
+          element: <Planets />,
         },
       ],
     },

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Mercury",
+    "overview": "Mercury es el planeta más pequeño del Sistema Solar y el más cercano al Sol. Su órbita alrededor del Sol dura 87.97 días terrestres, la más corta de todos los planetas del Sistema Solar. Mercury es uno de los cuatro planetas terrestres en el Sistema Solar y es un cuerpo rocoso similar a la Tierra. Su superficie es similar a la de la Luna, con extensas llanuras tipo mar y una gran cantidad de cráteres, lo que indica que ha estado geológicamente inactivo durante miles de millones de años. Este pequeño planeta carece de una atmósfera significativa, lo que significa que no tiene un efecto invernadero para retener el calor. Como resultado, las temperaturas en su superficie varían drásticamente, desde aproximadamente -173°C durante la noche hasta 427°C durante el día debido a la falta de una atmósfera que distribuya el calor de manera uniforme."
+  },
+  {
+    "name": "Venus",
+    "overview": "Venus es el segundo planeta más cercano al Sol. Recibe su nombre de la diosa romana del amor y la belleza. Es el objeto natural más brillante en el cielo nocturno de la Tierra después de la Luna. Venus puede ser visto a simple vista en ocasiones, incluso durante el día. Tiene una densa atmósfera compuesta principalmente de dióxido de carbono, con nubes de ácido sulfúrico. Esto crea un efecto invernadero descontrolado en la superficie de Venus, lo que resulta en temperaturas extremadamente altas, alcanzando los 471°C. La presión atmosférica en la superficie de Venus es más de 90 veces la de la Tierra, lo que hace que sea un lugar inhóspito para la vida tal como la conocemos. Aunque Venus tiene volcanes y llanuras de lava, su actividad geológica es limitada en comparación con la Tierra."
+  },
+  {
+    "name": "Earth",
+    "overview": "La Tierra es el tercer planeta desde el Sol y el único conocido por albergar vida. Aproximadamente el 70.8% de la superficie de la Tierra está cubierta de agua, y el 29.2% restante es tierra. La distancia de la Tierra al Sol, sus propiedades físicas y su historia geológica han permitido la evolución y el desarrollo de la vida. La Tierra tiene una estructura interna dividida en capas, con una corteza sólida, un manto viscoso y un núcleo sólido. La superficie terrestre está formada por diversos tipos de rocas, incluyendo granito, andesita y basalto. La Tierra experimenta una amplia gama de climas y ecosistemas, desde desiertos áridos hasta selvas tropicales, lo que la convierte en un planeta diverso y único en el Sistema Solar."
+  },
+  {
+    "name": "Mars",
+    "overview": "Marte es el cuarto planeta desde el Sol y el segundo más pequeño del Sistema Solar, siendo más grande solo que Mercurio. Marte es conocido como el \"Planeta Rojo\" debido a su color característico, que se debe a la presencia de óxido de hierro en su superficie. Al igual que la Tierra, Marte ha experimentado procesos de diferenciación, lo que significa que tiene un núcleo metálico, un manto y una corteza rocosa. Su superficie está compuesta en su mayoría de basalto toleítico, con áreas ricas en sílice. Marte muestra evidencia de actividad volcánica y fluvial en el pasado, con cañones profundos y cauces de ríos secos. Los científicos han buscado signos de vida en Marte, pero hasta ahora no se ha encontrado evidencia concluyente."
+  },
+  {
+    "name": "Jupiter",
+    "overview": "Júpiter es el quinto planeta desde el Sol y el más grande del Sistema Solar. Es un gigante gaseoso con una masa dos veces y media mayor que la de todos los demás planetas combinados. Júpiter tiene una estructura interna interesante, con un núcleo difuso que se mezcla en su manto. Se cree que esta característica se debe a un impacto con un planeta de unas diez masas terrestres poco después de la formación de Júpiter, lo que habría perturbado un núcleo originalmente sólido. El aspecto más distintivo de Júpiter es su Gran Mancha Roja, una inmensa tormenta que ha estado activa durante siglos. El planeta también tiene un sistema de anillos, aunque no son tan impresionantes como los de Saturno."
+  },
+  {
+    "name": "Saturn",
+    "overview": "Saturno es el sexto planeta desde el Sol y el segundo más grande del Sistema Solar, después de Júpiter. Es un gigante gaseoso con un radio aproximadamente nueve veces y media mayor que el de la Tierra. A pesar de estar compuesto principalmente de hidrógeno y helio, la mayor parte de la masa de Saturno no se encuentra en fase gaseosa, ya que el hidrógeno se convierte en un líquido no ideal a una densidad superior a 0.01 g/cm3, que se alcanza en un radio que contiene el 99.9% de la masa de Saturno. Saturno es conocido por su sistema de anillos impresionante, que está compuesto principalmente de partículas de hielo y rocas. Estos anillos son una característica distintiva del planeta y son visibles incluso con telescopios modestos desde la Tierra."
+  },
+  {
+    "name": "Uranus",
+    "overview": "Urano es el séptimo planeta desde el Sol. Su nombre hace referencia al dios griego del cielo, Urano, según la mitología griega. Tiene el tercer radio planetario más grande y la cuarta mayor masa planetaria en el Sistema Solar. La estructura estándar de Urano consiste en tres capas: un núcleo rocoso (silicato/ferro-níquel) en el centro, un manto de hielo en el medio y una envoltura externa de hidrógeno y helio gaseoso. El núcleo es relativamente pequeño, con una masa de solo 0.55 masas terrestres. Urano es único en el Sistema Solar debido a su inclinación extrema, lo que significa que gira de lado en comparación con los demás planetas. Esto resulta en cambios estacionales extremos en su atmósfera y una distribución desigual de la luz solar en su superficie."
+  },
+  {
+    "name": "Neptune",
+    "overview": "Neptuno es el octavo y más lejano planeta conocido del Sistema Solar. Es el cuarto planeta más grande por diámetro, el tercero más masivo y el gigante más denso. Tiene 17 veces la masa de la Tierra, lo que lo hace más masivo que su gemelo cercano, Urano. La estructura interna de Neptuno es similar a la de Urano, con su atmósfera formando alrededor del 5% al 10% de su masa y extendiéndose aproximadamente del 10% al 20% hacia el núcleo. Se encuentran mayores concentraciones de metano, amoníaco y agua en las regiones inferiores. Neptuno es conocido por su color azul profundo, que se debe a la absorción de luz roja por la atmósfera. También tiene vientos extremadamente fuertes, incluido el viento más rápido registrado en el Sistema Solar, que supera los 2,000 km/h."
+  }
+]

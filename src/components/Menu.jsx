@@ -18,15 +18,7 @@ export const Menu = ({ Menu, handleClick }) => {
             Dinace
           </a>
         </li>
-        <li>
-          <Link
-            className="block py-4 text-[#0c163b] font-medium text-xl xl:py-0 links-transitions xl:relative dark:text-white"
-            to="/"
-            onClick={() => handleClick()}
-          >
-            Inicio
-          </Link>
-        </li>
+
         <li>
           <Link
             to="/Ephemeris"
@@ -52,6 +44,15 @@ export const Menu = ({ Menu, handleClick }) => {
             className="block py-4 text-[#0c163b] font-medium text-xl xl:py-0 links-transitions xl:relative dark:text-white"
           >
             Galaxias
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/planets"
+            onClick={() => handleClick()}
+            className="block py-4 text-[#0c163b] font-medium text-xl xl:py-0 links-transitions xl:relative dark:text-white"
+          >
+            Planetas
           </Link>
         </li>
         <DropdownLink title="Astronomía" close={handleClick} />
