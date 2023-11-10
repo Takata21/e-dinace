@@ -14,6 +14,7 @@ import {
   Ephemeris,
   TermsOfUse,
   Planets,
+  Planet,
 } from './pages/index'
 
 function App() {
@@ -74,6 +75,10 @@ function App() {
         {
           path: '/planets',
           element: <Planets />,
+        },
+        {
+          path: '/planets/:name',
+          element: <Planet />,
         },
       ],
     },
