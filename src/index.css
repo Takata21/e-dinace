@@ -163,12 +163,19 @@ body {
     width: 16px;
     height: 16px;
     cursor: pointer;
-    background-image: url('/public/images/calendar.svg');
+    background-image: url('images/calendar.svg');
     color: white;
 }
 
 .planets {
-    background-image: url('/public/images/bg-stars-muted.jpg');
+    background-image: url('images/bg-stars-muted.jpg');
     background-position: center;
-    background-repeat: no-repeat;
+
+}
+
+@media screen and (min-width:1080px) {
+    .planets {
+
+        /* background-repeat: no-repeat; */
+    }
 }

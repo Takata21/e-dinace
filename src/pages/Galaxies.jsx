@@ -31,6 +31,7 @@ export function Galaxies() {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           searchError={searchError}
+          emptyMessage={'Por favor, ingresa una galaxia.'}
         />
       </section>
       <div

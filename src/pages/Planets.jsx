@@ -29,12 +29,12 @@ export function Planets() {
     },
     {
       id: 'fae6d233-899d-49da-9cbb-f0480956bbc4',
-      name: 'Saturne',
+      name: 'Saturno',
       original: 'Saturn',
     },
     {
       id: '09ee0cef-eea6-41a7-bb49-628ff78b0cf6',
-      name: 'Neptune',
+      name: 'Neptuno',
       original: 'Neptune',
     },
     {

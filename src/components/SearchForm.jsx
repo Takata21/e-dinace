@@ -1,4 +1,10 @@
-function SearchForm({ search, handleChange, handleSubmit, searchError }) {
+function SearchForm({
+  search,
+  handleChange,
+  handleSubmit,
+  searchError,
+  emptyMessage,
+}) {
   return (
     <div className="xl:w-[500px]">
       <form onSubmit={handleSubmit}>
@@ -36,6 +42,12 @@ function SearchForm({ search, handleChange, handleSubmit, searchError }) {
             required
             onChange={handleChange}
             value={search}
+            onInvalid={(event) => {
+              event.target.setCustomValidity(emptyMessage || '')
+            }}
+            onInput={(event) => {
+              event.target.setCustomValidity('')
+            }}
           />
           {/* {searchError && <small>{searchError}</small>} */}
           <button

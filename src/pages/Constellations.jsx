@@ -44,6 +44,7 @@ export function Constellations() {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           searchError={searchError}
+          emptyMessage={'Por favor, ingresa una constelación.'}
         />
         <SortSelect
           filter={sort}
