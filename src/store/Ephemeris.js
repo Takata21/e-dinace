@@ -4,6 +4,7 @@ export const useEphemerisStore = create((set) => {
   return {
     loading: false,
     ephemeris: null,
+    empty: true,
 
     fetchEphemeris: async ({
       targetBody,
@@ -34,9 +35,10 @@ export const useEphemerisStore = create((set) => {
           throw new Error('La solicitud no se completó correctamente')
         }
         const data = await response.json()
-        set({ ephemeris: data })
+        set({ ephemeris: data, empty: false })
         return data
       } catch (error) {
+        set({ empty: true })
         console.log(error)
       } finally {
         set({ loading: false })

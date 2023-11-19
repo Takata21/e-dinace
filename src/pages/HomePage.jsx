@@ -20,7 +20,7 @@ export function HomePage() {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       <Carousel />
-      <div className="grid md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 my-5 g font-Space p-4">
+      <div className="grid justify-center md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 my-5 font-Space p-4">
         <article
           className="relative flex justify-between p-3 bg-white border border-gray-200 rounded-lg shadow xl:gap-5 dark:bg-gray-800 dark:border-gray-700"
           data-test-id="moon-phase"
@@ -40,8 +40,8 @@ export function HomePage() {
                   ).en.replace(/\s+/g, '')}.png`}
                   alt={moonPhases?.image.alt_text}
                   className=""
-                  width={150}
-                  height={150}
+                  width={120}
+                  height={120}
                   onLoad={() => setIsImageLoading(false)}
                 />
               )}
@@ -137,8 +137,8 @@ export function HomePage() {
                   src="/images/eclipse-solar.jpg"
                   alt="solar eclipse images"
                   className="rounded-full"
-                  width={150}
-                  height={150}
+                  width={120}
+                  height={120}
                   onLoad={() => setIsImageLoading(false)}
                 />
               )}
@@ -231,8 +231,8 @@ export function HomePage() {
                   src="/images/moonEclipse.webp"
                   alt={moonPhases?.image.alt_text}
                   className="rounded-full"
-                  width={150}
-                  height={150}
+                  width={120}
+                  height={120}
                   onLoad={() => setIsImageLoading(false)}
                 />
               )}

@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 import { DropdownLink } from './DropdownLink'
+
 export const Menu = ({ Menu, handleClick }) => {
+
   return (
     <nav
       className={`${
         Menu ? 'active' : ''
       } menu xl:flex-[2] xl:justify-end dark:bg-gray-900 dark:text-white`}
+      
     >
       <ul className="relative flex flex-col h-full p-4 text-center xl:flex-row xl:gap-5 xl:justify-end">
         <li>

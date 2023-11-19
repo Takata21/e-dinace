@@ -29,13 +29,6 @@ export function Ephemeris() {
         >
           <RiAiGenerate /> Crear Efemérides
         </button>
-        <button
-          type="button"
-          className="hidden w-8 h-8 md:block"
-          onClick={handleActive}
-        >
-          <RiSideBarLine size={32} />
-        </button>
       </div>
       <div className="flex">
         {isLargeScreen ? (
