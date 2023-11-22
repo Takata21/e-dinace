@@ -1,40 +1,40 @@
-import { useState, useCallback } from 'react'
-import { ConstellationCard, Loader } from '../components/index'
-import { useConstellations } from '../hooks/useConstellations'
-import debounce from 'just-debounce-it'
-import { useSearch } from '../hooks/useSearch'
-import SortSelect from '../components/SortSelect'
-import SearchForm from '../components/SearchForm'
-import { ConstellationFilterOptions } from '../assets/constant'
-
+import { useState, useCallback } from "react";
+import { ConstellationCard, Loader } from "../components/index";
+import { useConstellations } from "../hooks/useConstellations";
+import debounce from "just-debounce-it";
+import { useSearch } from "../hooks/useSearch";
+import SortSelect from "../components/SortSelect";
+import SearchForm from "../components/SearchForm";
+import { ConstellationFilterOptions } from "../assets/constant";
+import { clsx } from "clsx";
 export function Constellations() {
-  const [sort, setSort] = useState('')
+  const [sort, setSort] = useState("");
   // eslint-disable-next-line no-unused-vars
-  const { searchError, search, setSearch } = useSearch()
+  const { searchError, search, setSearch } = useSearch();
   const { constellations, loading, getConstellations } = useConstellations({
     search,
     sort,
-  })
+  });
 
   const debounceGetConstellations = useCallback(
     debounce((search) => {
-      getConstellations({ search })
+      getConstellations({ search });
     }, 300),
     [getConstellations]
-  )
+  );
   const handleSortChange = (event) => {
-    setSort(event.target.value)
-    getConstellations({ search })
-  }
+    setSort(event.target.value);
+    getConstellations({ search });
+  };
   const handleSubmit = (event) => {
-    event.preventDefault()
-    getConstellations({ search })
-  }
+    event.preventDefault();
+    getConstellations({ search });
+  };
   const handleChange = (event) => {
-    const newSearch = event.target.value
-    setSearch(newSearch)
-    debounceGetConstellations(newSearch)
-  }
+    const newSearch = event.target.value;
+    setSearch(newSearch);
+    debounceGetConstellations(newSearch);
+  };
 
   return (
     <div className="p-5">
@@ -44,7 +44,7 @@ export function Constellations() {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           searchError={searchError}
-          emptyMessage={'Por favor, ingresa una constelación.'}
+          emptyMessage={"Por favor, ingresa una constelación."}
         />
         <SortSelect
           filter={sort}
@@ -53,8 +53,13 @@ export function Constellations() {
         />
       </section>
       <div
-        className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-center w-full min-h-screen gap-5  dark:bg-[#18202b]"
-        data-test-id="constellations"
+        className={clsx(
+          {
+            "grid-cols-[repeat(auto-fill,minmax(300px,1fr))] ":
+              loading !== true,
+          },
+          "grid items-center justify-center w-full min-h-[calc(100vh-225px)] gap-5 p-5 dark:bg-[#18202b]"
+        )}
       >
         {loading ? (
           <div className="relative h-full">
@@ -75,5 +80,5 @@ export function Constellations() {
         )}
       </div>
     </div>
-  )
+  );
 }

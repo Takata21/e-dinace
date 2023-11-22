@@ -46,7 +46,31 @@ body {
 
 }
 
+.scroll-table::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
 
+.scroll-table::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.scroll-table::-webkit-scrollbar-button:increment,.scroll-table::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.scroll-table::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.scroll-table::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid transparent;
+}
+
+.scroll-table::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
 
 /*----------------Mobile Menu-----------------*/
 

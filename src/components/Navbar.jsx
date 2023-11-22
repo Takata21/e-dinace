@@ -14,7 +14,7 @@ export const Navbar = () => {
 
   return (
     <header className="h-20 p-4 bg-white border-gray-200 dark:bg-gray-900">
-      <div className="relative z-50 flex flex-wrap items-center justify-between h-full mx-auto max-w-screen-1xl xl:flex-row xl:flex-nowrap dark:text-white">
+      <div className="relative z-50 flex flex-wrap items-center justify-between h-full mx-auto xl:flex-row xl:flex-nowrap dark:text-white">
         <div className="flex items-center justify-between w-full xl:w-auto xl:flex-1">
           <Link to="/" className="flex items-center">
             <img

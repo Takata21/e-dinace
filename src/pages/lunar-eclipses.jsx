@@ -3,7 +3,7 @@ import { Loader, LunarEclipseCard } from '../components/index'
 import { lunarEclipseTypesOptions } from '../assets/constant'
 import { useState } from 'react'
 import { useLunarEclipses } from '../hooks/useLunarEclipses'
-
+import { clsx } from "clsx";
 export function LunarEclipses() {
   const [filter, setSort] = useState('')
   // eslint-disable-next-line no-unused-vars
@@ -25,7 +25,11 @@ export function LunarEclipses() {
       </section>
 
       {loading ? (
-        <div className="relative flex w-full min-h-[calc(100vh-80px)]">
+        <div className={clsx(
+          {
+            'justify-center':loading!==false
+          },"relative flex w-full min-h-[calc(100vh-80px)]"
+        )}>
           <Loader />
         </div>
       ) : (

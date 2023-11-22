@@ -3,42 +3,51 @@ import {
   formatCoordinates,
   formatGeographicCoordinates,
   getLunarPhaseDescription,
-} from '../utils/astronomyUtils'
-import { BsSearch } from 'react-icons/bs'
-import { Loader, ImageSkeleton } from '../components/index'
-import { useState, useRef } from 'react'
-import { useMoon } from '../hooks/useMoonPhases'
+} from "../utils/astronomyUtils";
+import { BsSearch } from "react-icons/bs";
+import { Loader, ImageSkeleton } from "../components/index";
+import { useState, useRef } from "react";
+import { useMoon } from "../hooks/useMoonPhases";
+import { clsx } from "clsx";
 export function MoonPhases() {
-  const inputRef = useRef(null)
+  const inputRef = useRef(null);
   const [selectedDate, setSelectedDate] = useState(
     new Date().toISOString().slice(0, 16)
-  )
-  const { isLoading, error, data, setDateTimeValue } = useMoon()
-  const [isImageLoading, setIsImageLoading] = useState(true)
-  const EARTH_DIAMETER = 12742
+  );
+  const { isLoading, error, data, setDateTimeValue } = useMoon();
+  const [isImageLoading, setIsImageLoading] = useState(true);
+  const EARTH_DIAMETER = 12742;
 
-  const { days, hours, minutes } = convertAge(data?.age)
+  const { days, hours, minutes } = convertAge(data?.age);
 
   const handleChange = (e) => {
-    setSelectedDate(e.target.value)
-  }
+    setSelectedDate(e.target.value);
+  };
   const handleClick = (e) => {
-    e.preventDefault()
-    window.scrollTo(0, 0)
-    setDateTimeValue(inputRef.current.value)
-  }
+    e.preventDefault();
+    window.scrollTo(0, 0);
+    setDateTimeValue(inputRef.current.value);
+  };
 
   const handleKeyDown = (e) => {
-    e.preventDefault() // Prevenir la entrada manual
-  }
+    e.preventDefault(); // Prevenir la entrada manual
+  };
 
   return (
-    <div className="flex flex-col justify-between w-full min-h-screen p-5 text-white bg-black xl:flex-row">
+    <div
+      className={clsx(
+        {
+          "justify-center items-center": isLoading !== false,
+          "justify-between": isLoading !== true,
+        },
+        "flex flex-col  w-full min-h-screen p-5 text-white bg-black xl:flex-row"
+      )}
+    >
       {isLoading ? (
         <Loader />
       ) : error ? (
         <div
-          className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+          className="relative px-4 py-3 text-red-700 bg-red-100 border border-red-400 rounded"
           role="alert"
         >
           <strong className="font-bold">Error:</strong>
@@ -63,7 +72,7 @@ export function MoonPhases() {
           <div className="relative h-full my-5 min-h-[388px] ">
             {isImageLoading && (
               <ImageSkeleton
-                classes={'h-full absolute top-0 bottom-0 left-0 right-0 '}
+                classes={"h-full absolute top-0 bottom-0 left-0 right-0 "}
               />
             )}
             <img
@@ -171,5 +180,5 @@ export function MoonPhases() {
         </>
       )}
     </div>
-  )
+  );
 }
