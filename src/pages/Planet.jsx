@@ -23,11 +23,11 @@ export function Planet() {
               />
             </Zoom>
             <div>
-              <h2 className="mb-5 text-4xl font-bold text-center dark:text-white uppercase font-Antonio xl:text-left xl:text-7xl text-black">
+              <h2 className="mb-5 text-4xl font-bold text-center text-black uppercase dark:text-white font-Antonio xl:text-left xl:text-7xl">
                 {planetInfo?.name}
               </h2>
               <p
-                className="dark:text-white text-black font-Metropolis xl:leading-7"
+                className="text-black dark:text-white font-Metropolis xl:leading-7"
                 data-testid="planet-desc"
               >
                 {planetInfo?.overview}
