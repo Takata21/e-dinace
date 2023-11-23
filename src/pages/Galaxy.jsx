@@ -2,13 +2,17 @@ import { useGalaxy } from '../hooks/useGalaxy'
 import { Loader, InfoCard } from '../components'
 import Zoom from 'react-medium-image-zoom'
 import '../image-zoom.css'
+import {clsx} from 'clsx'
 export function Galaxy() {
   const urlSearchParams = new URLSearchParams(window.location.search)
   const id = urlSearchParams.get('id')
   const { galaxyInfo, loading } = useGalaxy(id)
   const galaxy = galaxyInfo[0]
   return (
-    <div className="px-5 dark:text-white xl:px-24 constellation bg-[#fafafa] dark:bg-gray-800">
+    <div className={clsx(
+      {"flex justify-center items-center":loading!==true},
+      "px-5 dark:text-white xl:px-24 constellation bg-[#fafafa] dark:bg-gray-800 h-full min-h-[calc(100vh-80px)]"
+    )}>
       {loading ? (
         <Loader />
       ) : (

@@ -1,14 +1,20 @@
-import { useParams } from 'react-router-dom'
-import { usePlanet } from '../hooks/usePlanets'
-import { Loader } from '../components'
-import Zoom from 'react-medium-image-zoom'
-import '../image-zoom.css'
-import { getId } from '../utils/utils'
+import { useParams } from "react-router-dom";
+import { usePlanet } from "../hooks/usePlanets";
+import { Loader } from "../components";
+import Zoom from "react-medium-image-zoom";
+import "../image-zoom.css";
+import { getId } from "../utils/utils";
+import { clsx } from "clsx";
 export function Planet() {
-  const { name } = useParams()
-  const { planetInfo, loading, messageError } = usePlanet({ name })
+  const { name } = useParams();
+  const { planetInfo, loading, messageError } = usePlanet({ name });
   return (
-    <div className="px-5 dark:text-white xl:px-24 planets bg-[#fafafa] dark:bg-gray-800 min-h-[calc(100vh-80px)]">
+    <div
+      className={clsx(
+        { "flex justify-center items-center": loading !== true },
+        "px-5 dark:text-white xl:px-24 planets bg-[#fafafa] dark:bg-gray-800 min-h-[calc(100vh-80px)]"
+      )}
+    >
       {loading ? (
         <Loader />
       ) : (
@@ -39,7 +45,7 @@ export function Planet() {
             data-testid="planet-info-list"
           >
             {planetInfo?.info.map((item) => {
-              if (item.value !== '' && item.value !== null) {
+              if (item.value !== "" && item.value !== null) {
                 return (
                   <li
                     key={getId()}
@@ -52,14 +58,14 @@ export function Planet() {
                       <span dangerouslySetInnerHTML={{ __html: item.value }} />
                     </span>
                   </li>
-                )
+                );
               } else {
-                return null
+                return null;
               }
             })}
           </ul>
         </div>
       )}
     </div>
-  )
+  );
 }

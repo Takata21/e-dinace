@@ -2,6 +2,7 @@ import { useConstellation } from '../hooks/useConstellation'
 import { InfoCard, Loader } from '../components/index'
 import Zoom from 'react-medium-image-zoom'
 import '../image-zoom.css'
+import {clsx} from 'clsx'
 export function Constellation() {
   const urlSearchParams = new URLSearchParams(window.location.search)
   const id = urlSearchParams.get('id')
@@ -10,7 +11,10 @@ export function Constellation() {
   })
 
   return (
-    <div className="px-5 dark:text-white xl:px-24 constellation bg-[#fafafa] dark:bg-gray-800">
+    <div className={clsx(
+      {"flex justify-center items-center":loading!==true},
+      "px-5 dark:text-white xl:px-24 constellation bg-[#fafafa] dark:bg-gray-800 h-full min-h-[calc(100vh-80px)]"
+    )}>
       {loading ? (
         <Loader />
       ) : (
