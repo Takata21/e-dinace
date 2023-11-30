@@ -12,12 +12,12 @@ export const ThemeProvider = ({ children }) => {
   }
 
   // Detectar el modo preferido del sistema y establecer el tema en consecuencia
-  // useEffect(() => {
-  //   const prefersDarkMode = window.matchMedia(
-  //     '(prefers-color-scheme: dark)'
-  //   ).matches
-  //   setTheme(prefersDarkMode ? 'dark' : 'light')
-  // }, [])
+  useEffect(() => {
+    const prefersDarkMode = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches
+    setTheme(prefersDarkMode ? 'dark' : 'light')
+  }, [])
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
