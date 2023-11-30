@@ -73,7 +73,7 @@ export const Carousel = () => {
             to="/galaxies"
             className="z-10 w-full text-2xl font-semibold text-white text-gradient xl:text-5xl xl:w-[620px]"
           >
-            NAVEGA ENTRE LAS CONSTELACIONES DE GALAXIAS
+            NAVEGA ENTRE LAS CONSTELACIONES
             <FaArrowRightLong className="arrow xl:my-5" color="#375ba7" />
           </Link>
           <div className="absolute bottom-2 right-3">
